@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AJ Shine Detailing — Car Detailing in Doreen &amp; Mernda</title>
+<meta name="description" content="Mobile car detailing across Doreen and Mernda. Book a detail and get your car back looking like the day you bought it.">
+<meta property="og:title" content="AJ Shine Detailing — Car Detailing in Doreen &amp; Mernda">
+<meta property="og:description" content="Mobile car detailing across Doreen and Mernda. Book a detail and get your car back looking like the day you bought it.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>✨</text></svg>">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "AutoWash", "name": "AJ Shine Detailing", "telephone": "(03) 4420 9040", "address": {"@type": "PostalAddress", "streetAddress": "12 Gentle Walk, Doreen VIC 3754"}, "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJ25dFKqxL1moRPDicnEgKjqc", "areaServed": "Doreen, Mernda and surrounding northern suburbs"}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#0b6bcb;
+  --ink:#14161a; --body:#3d434d; --line:#e3e6ea;
+  --bg:#ffffff; --panel:#f6f8fa; --onaccent:#ffffff;
+}
+@media (prefers-color-scheme:dark){
+  :root{--ink:#f2f4f7;--body:#b9c0cb;--line:#2a2f38;--bg:#0f1216;--panel:#171b21}
+}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--body);
+  font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  padding-bottom:76px; /* room for the sticky call bar */
+}
+h1,h2,h3{color:var(--ink);line-height:1.2;letter-spacing:-.02em}
+/* NOTE: .wrap and section land on the SAME element, and `.wrap` (a class) beats
+   `section` (an element) on specificity. Using the `padding` shorthand in both
+   means .wrap silently wipes the section's vertical padding — every section
+   collapsed to zero top/bottom space. Caught in preview 13 Aug 2026.
+   Fix: each rule sets only the sides it owns. Never use the shorthand here. */
+.wrap{max-width:760px;margin:0 auto;padding-left:20px;padding-right:20px}
+section{padding-top:46px;padding-bottom:46px;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+
+/* ---- hero ---- */
+.hero{background:var(--panel);padding-top:48px;padding-bottom:42px;border-top:0}
+.eyebrow{
+  display:inline-block;background:var(--accent);color:var(--onaccent);
+  font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  padding:6px 12px;border-radius:99px;margin-bottom:18px
+}
+h1{font-size:clamp(31px,7.5vw,50px);font-weight:850;margin-bottom:14px}
+.tagline{font-size:clamp(17px,3.6vw,21px);max-width:52ch}
+
+/* ---- buttons ---- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:16px 26px;border-radius:12px;font-size:18px;font-weight:750;
+  text-decoration:none;border:2px solid var(--accent);min-height:56px;
+}
+.btn-call{background:var(--accent);color:var(--onaccent)}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn:active{transform:translateY(1px)}
+
+/* ---- lists ---- */
+h2{font-size:clamp(22px,4.6vw,29px);font-weight:800;margin-bottom:8px}
+.sub{margin-bottom:22px}
+.services{list-style:none;display:grid;gap:11px}
+.services li{
+  background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:10px;padding:15px 17px;color:var(--ink);font-weight:600
+}
+.services li span{display:block;font-weight:400;color:var(--body);font-size:15.5px;margin-top:3px}
+.trust{list-style:none;display:grid;gap:10px;margin-top:6px}
+.trust li{padding-left:30px;position:relative;color:var(--ink)}
+.trust li::before{
+  content:"";position:absolute;left:6px;top:.62em;width:9px;height:9px;
+  border-radius:50%;background:var(--accent)
+}
+
+/* ---- review block: this is what feeds the engine ---- */
+.review{
+  background:var(--panel);border:2px solid var(--accent);
+  border-radius:14px;padding:28px 22px;text-align:center
+}
+.review h2{margin-bottom:6px}
+.review p{max-width:44ch;margin:0 auto 20px}
+
+/* ---- contact ---- */
+.rows{list-style:none;display:grid;gap:2px;margin-top:4px}
+.rows li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line)}
+.rows li:last-child{border-bottom:0}
+.rows b{color:var(--ink);font-weight:650}
+.rows a{color:var(--ink);font-weight:700;text-decoration:none;border-bottom:2px solid var(--accent)}
+
+/* ---- sticky call bar: always one tap from a phone call ---- */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:9;
+  background:var(--accent);border-top:1px solid rgba(0,0,0,.12);
+  padding:12px 20px calc(12px + env(safe-area-inset-bottom));
+}
+.bar a{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  color:var(--onaccent);font-size:19px;font-weight:850;text-decoration:none;
+  max-width:760px;margin:0 auto;min-height:30px
+}
+footer{padding-top:32px;padding-bottom:40px;font-size:14px;color:var(--body);text-align:center}
+footer a{color:var(--body)}
+@media print{.bar{position:static}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Car Detailing &middot; Doreen &amp; Mernda</span>
+    <h1>AJ Shine Detailing</h1>
+    <p class="tagline">Mobile car detailing across Doreen and Mernda. Book a detail and get your car back looking like the day you bought it.</p>
+    <div class="btns">
+      <a class="btn btn-call" href="tel:+61344209040">&#9742;&nbsp; Call (03) 4420 9040</a>
+      <a class="btn btn-ghost" href="https://search.google.com/local/writereview?placeid=ChIJ25dFKqxL1moRPDicnEgKjqc" target="_blank" rel="noopener">&#9733;&nbsp; Leave a review</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="wrap">
+  <h2>What we do</h2>
+  <p class="sub">Cars, 4WDs and utes. Booked by phone — one call and we&#x27;ll sort a time.</p>
+  <ul class="services">
+    <li>Full detail — inside and out<span>The lot. Exterior wash and protect, interior vacuumed, wiped and dressed.</span></li>
+    <li>Exterior detail<span>Snow foam wash, wheels and tyres, dried properly, then wax or sealant.</span></li>
+    <li>Interior detail<span>Seats, carpets, door jambs, vents and glass. The bits that actually get touched.</span></li>
+    <li>Paint decontamination<span>Clay bar to pull out what washing leaves behind, so the paint feels smooth again.</span></li>
+    <li>Wheels and brake dust<span>Brake dust is acidic and eats alloys. Cleaned back properly, not just rinsed.</span></li>
+  </ul>
+</section>
+
+<section class="wrap">
+  <h2>Why locals book us</h2>
+  <ul class="trust">
+    <li>Local to Doreen and Mernda — not a franchise driving up from town</li>
+    <li>We come to you, so your car doesn&#x27;t leave the driveway</li>
+    <li>Straight answers on what your car actually needs, and what it doesn&#x27;t</li>
+    <li>One phone call to book — you&#x27;ll speak to someone, not a form</li>
+  </ul>
+</section>
+
+<section class="wrap">
+  <div class="review">
+    <h2>Happy with the detail?</h2>
+    <p>A quick Google review is the single biggest help — it&#x27;s how other Doreen locals find us. Takes about 30 seconds.</p>
+    <a class="btn btn-call" href="https://search.google.com/local/writereview?placeid=ChIJ25dFKqxL1moRPDicnEgKjqc" target="_blank" rel="noopener">&#9733;&nbsp; Leave a Google review</a>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Get in touch</h2>
+  <ul class="rows">
+    <li><b>Phone</b><a href="tel:+61344209040">(03) 4420 9040</a></li>
+    <li><b>Area</b><span>Doreen, Mernda &amp; surrounds</span></li>
+    <li><b>Hours</b><span>Open from 10:00am</span></li>
+    <li><b>Booking</b><span>Call or text — we&#x27;ll find a time</span></li>
+
+  </ul>
+</section>
+</main>
+
+<footer class="wrap">
+  <p>&copy; 2026 AJ Shine Detailing</p>
+  <p style="margin-top:8px">Site by <a href="https://www.facebook.com/groups/doreenbusiness">JAE Enterprise</a></p>
+</footer>
+
+<nav class="bar"><a href="tel:+61344209040">&#9742;&nbsp; Tap to call &mdash; (03) 4420 9040</a></nav>
+</body>
+</html>
