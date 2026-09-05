@@ -104,6 +104,14 @@ h2{font-size:clamp(33px,5.6vw,52px);margin-bottom:13px}
 .card .ic{font-size:31px;line-height:1;margin-bottom:13px;display:block}
 .card h3{font-size:24px;margin-bottom:8px}
 .card p{font-size:16px;line-height:1.62}
+.card .price{
+  display:block;margin-top:15px;padding-top:14px;border-top:1px solid var(--line);
+  font-size:21px;font-weight:700;color:var(--accent);letter-spacing:-.01em;
+}
+.card .price small{
+  display:block;margin-top:4px;font-size:14px;font-weight:400;
+  color:var(--body);letter-spacing:0;line-height:1.5;
+}
 
 /* ---------- gallery ---------- */
 .gallery{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(232px,1fr))}
@@ -136,6 +144,46 @@ h2{font-size:clamp(33px,5.6vw,52px);margin-bottom:13px}
 .quote cite{display:block;margin-top:14px;font-style:normal;font-weight:700;color:var(--body);font-size:14.5px}
 
 /* ---------- review CTA ---------- */
+.diag{background:#11161c;padding:66px 0;color:#e8edf3}
+.diag h2{color:#fff}
+.diag .hook{font-size:clamp(19px,2.4vw,25px);line-height:1.42;font-weight:700;color:#fff;
+  max-width:30ch;margin:0 0 34px;border-left:4px solid #0b6bcb;padding-left:18px}
+.diag .cols{display:grid;grid-template-columns:1.25fr 1fr;gap:30px;align-items:start}
+@media(max-width:760px){.diag .cols{grid-template-columns:1fr}}
+.diag h3{font-size:14px;letter-spacing:.15em;text-transform:uppercase;color:#8fa3ba;
+  margin:0 0 12px;font-weight:700}
+.diag ul{list-style:none;padding:0;margin:0}
+.diag ul li{position:relative;padding:6px 0 6px 20px;line-height:1.55;color:#dbe3ec}
+.diag ul li::before{content:"";position:absolute;left:2px;top:14px;width:6px;height:6px;
+  border-radius:50%;background:#0b6bcb}
+.diag .box{background:#171d25;border:1px solid #2a323c;border-radius:14px;padding:24px}
+.diag .amt{font-size:38px;font-weight:800;color:#0b6bcb;line-height:1;letter-spacing:-.01em}
+.diag .inc{margin:12px 0 0;color:#c3cedb;font-size:15.5px;line-height:1.55}
+.diag .lim{margin-top:18px;padding-top:16px;border-top:1px solid #2a323c;
+  color:#93a1b2;font-size:14.5px;line-height:1.55}
+.card ul{list-style:none;padding:0;margin:14px 0 0}
+.card ul li{position:relative;padding:5px 0 5px 19px;font-size:15.5px;line-height:1.5}
+.card ul li::before{content:"";position:absolute;left:2px;top:13px;width:6px;height:6px;
+  border-radius:50%;background:#0b6bcb}
+.book{background:#0f1216;padding:64px 0}
+.book h2{color:#fff}
+.book p.lead{color:#c6cfda;max-width:52ch;font-size:17.5px;margin-bottom:26px}
+.book form{display:grid;gap:14px;max-width:560px}
+.book .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.book .two{grid-template-columns:1fr}}
+.book label{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+  color:#93a1b2;margin-bottom:6px;font-weight:700}
+.book input,.book select,.book textarea{
+  width:100%;box-sizing:border-box;background:#171c22;border:1px solid #2b333d;
+  color:#f2f5f8;border-radius:10px;padding:13px 14px;font:inherit;font-size:16px}
+.book input:focus,.book select:focus,.book textarea:focus{
+  outline:none;border-color:#0b6bcb;box-shadow:0 0 0 3px #0b6bcb33}
+.book textarea{min-height:92px;resize:vertical}
+.book .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.book .note{color:#8a97a6;font-size:14px;margin-top:2px}
+.book .msg{margin-top:14px;font-weight:700;display:none}
+.book .msg.ok{display:block;color:#5fd08a}
+.book .msg.bad{display:block;color:#ff8f8f}
 .review-cta{
   background:var(--dark);color:#fff;text-align:center;position:relative;overflow:hidden;
 }
@@ -201,7 +249,9 @@ footer .meta{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,
       <a class="btn btn-call" href="tel:+61344209040">&#9742; Call (03) 4420 9040</a>
       <a class="btn btn-ghost" href="https://search.google.com/local/writereview?placeid=ChIJ25dFKqxL1moRPDicnEgKjqc" target="_blank" rel="noopener">&#9733; Leave a review</a>
     </div>
-
+    <div class="trust-strip">
+      <span class="pill">Serving Doreen &amp; Mernda since 2025</span>
+    </div>
   </div></div>
 </header>
 
@@ -213,16 +263,35 @@ footer .meta{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,
     <p>Cars, 4WDs and utes. Booked by phone — one call and we&#x27;ll sort a time.</p>
   </div>
   <div class="grid">
-    <div class="card"><span class="ic">✨</span><h3>Full detail — inside and out</h3><p>The lot. Exterior wash and protect, interior vacuumed, wiped and dressed.</p></div>
-    <div class="card"><span class="ic">🛡️</span><h3>Ceramic coating</h3><p>A hard protective layer bonded to the paint. Dirt and water sheet straight off, washing gets easier, and the colour keeps its depth for years instead of months.</p></div>
-    <div class="card"><span class="ic">🫧</span><h3>Exterior detail</h3><p>Snow foam wash, wheels and tyres, dried properly, then wax or sealant.</p></div>
-    <div class="card"><span class="ic">🧽</span><h3>Interior detail</h3><p>Seats, carpets, door jambs, vents and glass. The bits that actually get touched.</p></div>
-    <div class="card"><span class="ic">🪞</span><h3>Paint decontamination</h3><p>Clay bar to pull out what washing leaves behind, so the paint feels smooth again.</p></div>
-    <div class="card"><span class="ic">🛞</span><h3>Wheels and brake dust</h3><p>Brake dust is acidic and eats alloys. Cleaned back properly, not just rinsed.</p></div>
-    <div class="card"><span class="ic">🚗</span><h3>Pre-sale detail</h3><p>Selling it? A proper detail is the cheapest thing you can do to the price.</p></div>
+    <div class="card"><span class="ic">✨</span><h3>Full detail — inside and out</h3><p>The lot, in one go. This is the one most people book.</p><ul><li>Snow foam pre-wash, then a safe two-bucket contact wash</li><li>Wheels, arches and tyres cleaned back and dressed</li><li>Paint decontaminated and clay barred, then protected with wax or sealant</li><li>Interior vacuumed, mats out, seats and carpets steam cleaned</li><li>Dash, console, vents, door cards and jambs</li><li>Engine bay cleaned and dressed</li><li>All glass, inside and out</li></ul><span class="price">From $350<small>Sedans and hatches. SUVs, 4WDs and utes are more — there is simply more car. Quoted after I look at it.</small></span></div>
+    <div class="card"><span class="ic">🛡️</span><h3>Ceramic coating</h3><p>A hard protective layer bonded to the paint. Dirt and water sheet straight off, washing gets easier, and the colour keeps its depth for years instead of months.</p><ul><li>Full decontamination and paint correction first — a coating locks in whatever is under it</li><li>CarPro CQuartz UK 3.0, applied by hand, panel by panel</li><li>Wheels and glass can be coated too</li><li>Aftercare talked through so it actually lasts</li></ul><span class="price">From $750<small>CarPro CQuartz UK 3.0 — 2+ years, and longer if you look after it. Includes decontamination and paint correction. Scratched or older paint is quoted after I look at it — I would rather see the car than guess.</small></span></div>
+    <div class="card"><span class="ic">🫧</span><h3>General clean</h3><p>The regular one. Keeps a car that gets looked after looking like it.</p><ul><li>Snow foam pre-wash so the grit comes off before anything touches the paint</li><li>Two-bucket contact wash, clean mitt</li><li>Wheels and tyres cleaned and dressed</li><li>Dried properly with a plush towel — this is where swirls come from</li><li>Windows and mirrors</li><li>Interior tidy — vacuum, dash and console wiped down</li></ul><span class="price">From $80<small>Small cars from $80, SUVs and utes from $110. The regular maintenance clean, not a full detail.</small></span></div>
+    <div class="card"><span class="ic">🧽</span><h3>Interior detail</h3><p>Everything you actually touch, done the slow way.</p><ul><li>Mats out and cleaned separately — the carpet underneath is where the smell lives</li><li>Carpets worked properly, not shaken and put back</li><li>Cloth seats shampooed and extracted; leather cleaned and conditioned</li><li>Dash, console, vents, buttons and door cards</li><li>Door jambs and sills — the bit everyone misses</li><li>Glass cleaned inside, where the film builds up</li><li>Deodorised at the source, not perfumed over the top</li></ul><span class="price">From $220<small>Steam cleaned seats and carpets. Price moves with how much has gone on in there — kids, dogs and tradies all cost more, and I would rather see it than guess.</small></span></div>
+    <div class="card"><span class="ic">🪞</span><h3>Paint decontamination and clay bar</h3><p>What a wash leaves behind. Do the bag test — if it feels gritty, it needs this.</p><ul><li>Iron fallout remover for embedded brake dust and rail dust</li><li>Tar and tree sap dissolved off, not scrubbed</li><li>Clay bar over every panel until the paint is glass-smooth</li><li>Has to happen before any wax, sealant or coating will bond properly</li><li>Darker cars can show some marring or swirling afterwards and may need correction — every car and colour is different</li></ul><span class="price">From $180<small>Usually done as part of a full detail or before a coating. On its own for paint that feels gritty but does not need correcting.</small></span></div>
+    <div class="card"><span class="ic">🚗</span><h3>Pre-sale detail</h3><p>Selling it? A proper detail is the cheapest thing you can do to the price.</p><ul><li>Full inside and out, finished for photos</li><li>Engine bay tidied and dressed</li><li>Headlights restored if they have gone cloudy — it ages a car more than anything</li><li>Wheels and tyres dressed</li><li>Glass streak-free so the listing photos come up clean</li></ul><span class="price">From $350<small>Same work as a full detail, finished for photos. Cheapest money you will spend on the asking price.</small></span></div>
 
   </div>
 </section>
+
+<section class="diag" id="diagnostics"><div class="wrap">
+  <div class="head">
+    <span class="kicker">Also from AJ Shine</span>
+    <h2>Car fault diagnostics</h2>
+  </div>
+  <p class="hook">Paying $150 to know what the problem is beats guessing and buying three parts to find out.</p>
+  <div class="cols">
+    <div>
+      <h3>What I do</h3>
+      <ul><li>Diagnose fault codes — all makes and models</li><li>Bidirectional scanner — it talks back to the car and commands components, not just reads from it. That is how you prove which part has actually failed</li><li>Pinpoint the fault, not just the warning light</li><li>A written report sent to you afterwards — yours to take to whoever does the work</li></ul>
+    </div>
+    <div class="box">
+      <div class="amt">$150</div>
+      <p class="inc">Includes travel, the diagnostic work and the written report. One flat price.</p>
+      <p class="lim">What I don&#x27;t do: key programming and module programming. If that&#x27;s what your car needs, I&#x27;ll tell you straight so you&#x27;re not paying me to find out.</p>
+    </div>
+  </div>
+</div></section>
+
 
 <section class="alt"><div class="wrap">
   <div class="head">
@@ -260,6 +329,56 @@ footer .meta{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,
   <p>A quick Google review is the single biggest help — it&#x27;s how other Doreen locals find us. Takes about 30 seconds.</p>
   <a class="btn btn-call" href="https://search.google.com/local/writereview?placeid=ChIJ25dFKqxL1moRPDicnEgKjqc" target="_blank" rel="noopener">&#9733; Leave a Google review</a>
 </div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div class="head">
+    <span class="kicker">Book your car in</span>
+    <h2>Tell me about the car</h2>
+  </div>
+  <p class="lead">Fill this in and it comes straight to my phone as a text. I&#x27;ll ring you back with a time and a price. If you&#x27;d rather just talk, the number&#x27;s above — that&#x27;s still the quickest way.</p>
+  <form id="bookform" action="https://aj-phone-agent-production.up.railway.app/book" method="post">
+    <div class="two">
+      <div><label for="bk-name">Your name</label><input id="bk-name" name="name" required autocomplete="name"></div>
+      <div><label for="bk-phone">Phone</label><input id="bk-phone" name="phone" required type="tel" autocomplete="tel"></div>
+    </div>
+    <div class="two">
+      <div><label for="bk-car">Your car</label><input id="bk-car" name="car" placeholder="e.g. Ford Everest"></div>
+      <div><label for="bk-service">What are you after</label><select id="bk-service" name="service"><option value="Not sure — need advice">Not sure — need advice</option><option value="Full detail — inside and out">Full detail — inside and out</option><option value="Ceramic coating">Ceramic coating</option><option value="Exterior detail">Exterior detail</option><option value="Interior detail">Interior detail</option><option value="Paint decontamination">Paint decontamination</option><option value="Wheels and brake dust">Wheels and brake dust</option><option value="Pre-sale detail">Pre-sale detail</option></select></div>
+    </div>
+    <div><label for="bk-when">Best day</label><input id="bk-when" name="when" placeholder="e.g. Saturday morning"></div>
+    <div><label for="bk-notes">Anything else</label><textarea id="bk-notes" name="notes"></textarea></div>
+    <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+    <button class="btn" type="submit">Send request</button>
+    <p class="note">No obligation. I&#x27;d rather see the car than guess at a price.</p>
+    <p class="msg" id="bkmsg"></p>
+  </form>
+</div></section>
+<script>
+(function(){
+  var f=document.getElementById("bookform"),m=document.getElementById("bkmsg");
+  if(!f) return;
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var b=f.querySelector("button"); b.disabled=true; b.textContent="Sending...";
+    var d={}; new FormData(f).forEach(function(v,k){d[k]=v;});
+    fetch(f.action,{method:"POST",headers:{"Content-Type":"application/json"},
+                    body:JSON.stringify(d)})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(!j.ok) throw new Error(j.error||"failed");
+        m.className="msg ok";
+        m.textContent="Got it. Jay will give you a call back.";
+        f.reset(); b.textContent="Sent";
+      })
+      .catch(function(){
+        m.className="msg bad";
+        m.textContent="That did not send. Give Jay a ring instead \u2014 " + "(03) 4420 9040";
+        b.disabled=false; b.textContent="Send request";
+      });
+  });
+})();
+</script>
+
 
 <section class="wrap">
   <div class="head">
