@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JAE Enterprise · Websites and missed-call answering for local business in Doreen</title>
+<meta name="description" content="I&#x27;m Jay, a Doreen local and a tradie myself. I build phone-first websites for local businesses, set up so happy customers can leave a Google review in one tap. You own it. No monthly fee.">
+<meta property="og:title" content="JAE Enterprise · Websites and missed-call answering for local business in Doreen">
+<meta property="og:description" content="I&#x27;m Jay, a Doreen local and a tradie myself. I build phone-first websites for local businesses, set up so happy customers can leave a Google review in one tap. You own it. No monthly fee.">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23e8a317'/><text x='16' y='23' font-size='19' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'>J</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "JAE Enterprise", "telephone": "0450 220 570", "areaServed": "Doreen, Mernda, South Morang, Epping and nearby suburbs"}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#e8a317; --onaccent:#11151b; --accent-dark:#7a4f00;
+  --ink:#11151b; --body:#4a5260; --line:#e2e6ec;
+  --bg:#ffffff; --panel:#f4f7fa; --dark:#0e1319;
+  --shadow:0 2px 4px rgba(16,24,40,.04),0 12px 28px rgba(16,24,40,.09);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--body);
+  font:400 17px/1.7 Inter,system-ui,sans-serif;
+  padding-bottom:74px;overflow-x:hidden;
+}
+h1,h2,h3,.display{
+  font-family:"Barlow Condensed",Impact,sans-serif;
+  font-weight:800;color:var(--ink);line-height:1.03;
+  letter-spacing:.005em;text-transform:uppercase;
+}
+.wrap{max-width:1080px;margin:0 auto;padding-left:22px;padding-right:22px}
+section{padding-top:74px;padding-bottom:74px}
+.alt{background:var(--panel)}
+img{max-width:100%;display:block}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--dark);color:#fff;padding-top:11px;padding-bottom:11px;font-size:14.5px}
+.topbar .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center;justify-content:space-between}
+.topbar b{color:#fff;font-weight:600}
+.topbar a{color:var(--accent);font-weight:700;text-decoration:none;white-space:nowrap}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--dark);overflow:hidden;padding-top:96px;padding-bottom:88px}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
+.hero-scrim{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(105deg,rgba(10,14,19,.94) 0%,rgba(10,14,19,.80) 46%,rgba(10,14,19,.52) 100%);
+}
+.hero .wrap{position:relative;z-index:2;max-width:1080px}
+.hero-inner{max-width:660px}
+.eyebrow{
+  display:inline-block;background:var(--accent);color:var(--onaccent);
+  font-family:"Barlow Condensed",sans-serif;font-size:16px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;padding:7px 15px;margin-bottom:20px;
+}
+h1{font-size:clamp(46px,10.5vw,86px);color:#fff;margin-bottom:18px}
+h1 .hl{color:var(--accent);display:block}
+.tagline{font-size:clamp(17px,2.3vw,20.5px);color:#d3dae4;max-width:50ch;line-height:1.6}
+.logo{max-height:74px;width:auto;margin-bottom:22px}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:18px 30px;font-family:"Barlow Condensed",sans-serif;
+  font-size:22px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  text-decoration:none;border:2px solid var(--accent);min-height:60px;
+  transition:transform .12s ease,box-shadow .12s ease;
+}
+.btn-call{background:var(--accent);color:var(--onaccent);box-shadow:0 8px 22px rgba(0,0,0,.28)}
+.btn-ghost{background:rgba(255,255,255,.06);color:#fff;backdrop-filter:blur(3px)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btns{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+
+/* ---------- trust strip ---------- */
+.trust-strip{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);
+  padding:9px 15px;font-size:14.5px;font-weight:600;color:#fff;
+}
+.pill .tick,.pill .stars{color:var(--accent);font-weight:800}
+
+/* ---------- section headings ---------- */
+.head{margin-bottom:38px;max-width:60ch}
+.kicker{
+  font-family:"Barlow Condensed",sans-serif;color:var(--accent);
+  font-size:17px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;
+  display:block;margin-bottom:9px;
+}
+h2{font-size:clamp(33px,5.6vw,52px);margin-bottom:13px}
+
+/* ---------- services ---------- */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(268px,1fr))}
+.card{
+  background:var(--bg);border:1px solid var(--line);border-top:4px solid var(--accent);
+  padding:28px 24px;box-shadow:var(--shadow);
+}
+.card .ic{width:34px;height:34px;color:var(--accent);margin-bottom:13px;display:block}
+.card h3{font-size:24px;margin-bottom:8px}
+.card p{font-size:16px;line-height:1.62}
+.card .price{
+  display:block;margin-top:15px;padding-top:14px;border-top:1px solid var(--line);
+  font-size:21px;font-weight:700;color:var(--accent);letter-spacing:-.01em;
+}
+.card .price small{
+  display:block;margin-top:4px;font-size:14px;font-weight:400;
+  color:var(--body);letter-spacing:0;line-height:1.5;
+}
+
+/* ---------- gallery ---------- */
+.gallery{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(232px,1fr))}
+.gallery figure{position:relative;overflow:hidden;background:var(--dark);aspect-ratio:4/3}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.gallery figure:hover img{transform:scale(1.05)}
+.ph{
+  display:flex;align-items:center;justify-content:center;height:100%;
+  background:linear-gradient(135deg,var(--accent-dark),var(--dark));
+  color:rgba(255,255,255,.5);font-family:"Barlow Condensed",sans-serif;
+  font-size:19px;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:18px;
+}
+
+/* ---------- trust list ---------- */
+.trust-list{list-style:none;display:grid;gap:15px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.trust-list li{
+  padding-left:42px;position:relative;color:var(--ink);font-weight:500;font-size:17px;
+}
+.trust-list li::before{
+  content:"\2713";position:absolute;left:0;top:-2px;
+  width:28px;height:28px;display:flex;align-items:center;justify-content:center;
+  background:var(--accent);color:var(--onaccent);font-weight:800;font-size:15px;
+}
+
+/* ---------- testimonials ---------- */
+.quotes{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(285px,1fr))}
+.quote{background:var(--bg);border:1px solid var(--line);padding:28px 25px;box-shadow:var(--shadow)}
+.quote .st{color:var(--accent);font-size:19px;letter-spacing:3px;margin-bottom:11px}
+.quote p{font-size:16.5px;line-height:1.68;color:var(--ink)}
+.quote cite{display:block;margin-top:14px;font-style:normal;font-weight:700;color:var(--body);font-size:14.5px}
+
+/* ---------- review CTA ---------- */
+.diag{background:#11161c;padding:66px 0;color:#e8edf3}
+.diag h2{color:#fff}
+.diag .hook{font-size:clamp(19px,2.4vw,25px);line-height:1.42;font-weight:700;color:#fff;
+  max-width:30ch;margin:0 0 34px;border-left:4px solid #e8a317;padding-left:18px}
+.diag .cols{display:grid;grid-template-columns:1.25fr 1fr;gap:30px;align-items:start}
+@media(max-width:760px){.diag .cols{grid-template-columns:1fr}}
+.diag h3{font-size:14px;letter-spacing:.15em;text-transform:uppercase;color:#8fa3ba;
+  margin:0 0 12px;font-weight:700}
+.diag ul{list-style:none;padding:0;margin:0}
+.diag ul li{position:relative;padding:6px 0 6px 20px;line-height:1.55;color:#dbe3ec}
+.diag ul li::before{content:"";position:absolute;left:2px;top:14px;width:6px;height:6px;
+  border-radius:50%;background:#e8a317}
+.diag .box{background:#171d25;border:1px solid #2a323c;border-radius:14px;padding:24px}
+.diag .amt{font-size:38px;font-weight:800;color:#e8a317;line-height:1;letter-spacing:-.01em}
+.diag .inc{margin:12px 0 0;color:#c3cedb;font-size:15.5px;line-height:1.55}
+.diag .lim{margin-top:18px;padding-top:16px;border-top:1px solid #2a323c;
+  color:#93a1b2;font-size:14.5px;line-height:1.55}
+.card ul{list-style:none;padding:0;margin:14px 0 0}
+.card ul li{position:relative;padding:5px 0 5px 19px;font-size:15.5px;line-height:1.5}
+.card ul li::before{content:"";position:absolute;left:2px;top:13px;width:6px;height:6px;
+  border-radius:50%;background:#e8a317}
+.book{background:#0f1216;padding:64px 0}
+.book h2{color:#fff}
+.book p.lead{color:#c6cfda;max-width:52ch;font-size:17.5px;margin-bottom:26px}
+.book form{display:grid;gap:14px;max-width:560px}
+.book .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.book .two{grid-template-columns:1fr}}
+.book label{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+  color:#93a1b2;margin-bottom:6px;font-weight:700}
+.book input,.book select,.book textarea{
+  width:100%;box-sizing:border-box;background:#171c22;border:1px solid #2b333d;
+  color:#f2f5f8;border-radius:10px;padding:13px 14px;font:inherit;font-size:16px}
+.book input:focus,.book select:focus,.book textarea:focus{
+  outline:none;border-color:#e8a317;box-shadow:0 0 0 3px #e8a31733}
+.book textarea{min-height:92px;resize:vertical}
+.book .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.book .note{color:#8a97a6;font-size:14px;margin-top:2px}
+.book .msg{margin-top:14px;font-weight:700;display:none}
+.book .msg.ok{display:block;color:#5fd08a}
+.book .msg.bad{display:block;color:#ff8f8f}
+.review-cta{
+  background:var(--dark);color:#fff;text-align:center;position:relative;overflow:hidden;
+}
+.review-cta::before{
+  content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2260%22%20height=%2260%22%3E%3Cpath%20d=%22M0%2060L60%200M-15%2015L15%20-15M45%2075L75%2045%22%20stroke=%22%23ffffff%22%20stroke-opacity=%220.07%22%20stroke-width=%2214%22/%3E%3C/svg%3E");opacity:.6;
+}
+.review-cta .wrap{position:relative;z-index:1}
+.review-cta h2{color:#fff}
+.review-cta p{max-width:46ch;margin:0 auto 30px;color:#cfd7e2;font-size:17.5px}
+
+/* ---------- contact ---------- */
+.rows{list-style:none;display:grid;gap:0;max-width:620px}
+.rows li{display:flex;justify-content:space-between;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.rows li:last-child{border-bottom:0}
+.rows b{color:var(--ink);font-weight:700}
+.rows a{color:var(--ink);font-weight:700;text-decoration:none;border-bottom:2px solid var(--accent)}
+
+/* ---------- footer ---------- */
+footer{background:var(--dark);color:#8c98a8;padding-top:52px;padding-bottom:56px;font-size:14.5px}
+footer .fname{
+  font-family:"Barlow Condensed",sans-serif;font-size:29px;font-weight:800;
+  color:#fff;text-transform:uppercase;margin-bottom:9px;
+}
+footer a{color:var(--accent);text-decoration:none}
+footer .meta{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1)}
+
+/* ---------- sticky call bar ---------- */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--accent);
+  padding:13px 20px calc(13px + env(safe-area-inset-bottom));
+  box-shadow:0 -4px 22px rgba(0,0,0,.22);
+}
+.bar a{
+  display:flex;align-items:center;justify-content:center;gap:11px;
+  color:var(--onaccent);font-family:"Barlow Condensed",sans-serif;
+  font-size:25px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;
+  text-decoration:none;max-width:1080px;margin:0 auto;
+}
+@media (max-width:640px){
+  section{padding-top:56px;padding-bottom:56px}
+  .hero{padding-top:64px;padding-bottom:60px}
+  .btn{width:100%}
+}
+@media print{.bar{position:static}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <b>Websites and missed-call answering for local business &middot; Doreen</b>
+  <span>Call Jay · <a href="tel:+61450220570">0450 220 570</a></span>
+</div></div>
+
+<header class="hero">
+  <div class="hero-bg" style="background-image:url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2260%22%20height=%2260%22%3E%3Cpath%20d=%22M0%2060L60%200M-15%2015L15%20-15M45%2075L75%2045%22%20stroke=%22%23ffffff%22%20stroke-opacity=%220.07%22%20stroke-width=%2214%22/%3E%3C/svg%3E');background-size:60px 60px;background-color:#7a4f00"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap"><div class="hero-inner">
+    
+    <span class="eyebrow">Doreen VIC · local business</span>
+    <h1>Websites for local trades <span class="hl">$750, yours to keep</span></h1>
+    <p class="tagline">I&#x27;m Jay, a Doreen local and a tradie myself. I build phone-first websites for local businesses, set up so happy customers can leave a Google review in one tap. You own it. No monthly fee.</p>
+    <div class="btns">
+      <a class="btn btn-call" href="tel:+61450220570">&#9742; Call 0450 220 570</a>
+      
+    </div>
+
+  </div></div>
+</header>
+
+<main>
+<section class="wrap">
+  <div class="head">
+    <span class="kicker">What I do</span>
+    <h2>Three things, done by a local</h2>
+    <p>Start with the website. Add the others if and when they help.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM10 18h4M8 6h8M8 9h5"/></svg><h3>Your website</h3><p>Built for phones, around your real jobs.</p><ul><li>Your own web address, in your name</li><li>A gallery of your real work</li><li>Tap to call, text or email</li><li>A one-tap Google review button</li><li>Hosted free on your account, no monthly fee</li></ul><span class="price">$750<small>paid once</small></span></div>
+    <div class="card"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><h3>Missed-call answering</h3><p>An AI answers when you can&#x27;t, works out who&#x27;s calling and why, screens out spam and texts you a summary. You make the callback.</p><ul><li>Ring 03 4420 9040 to hear it</li><li>It does not book jobs, you do</li></ul><span class="price">$39<small>a month</small></span></div>
+    <div class="card"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v12H9l-5 4zM8 9h8M8 12h5"/></svg><h3>Social media, done for you</h3><p>Posts written and scheduled to Facebook and Instagram every week. Nothing goes up until you approve it.</p><ul><li>No lock-in, cancel any time</li></ul><span class="price">$300<small>a month</small></span></div>
+
+  </div>
+</section>
+
+
+
+<section class="alt"><div class="wrap">
+  <div class="head">
+    <span class="kicker">Our work</span>
+    <h2>A site we built</h2>
+    <p>AJ Shine Detailing, Doreen. Live now, open it on your phone: ajshine.com.au</p>
+  </div>
+  <div class="gallery">
+    <figure><img src="img/ajshine.com.au.jpg" alt="ajshine.com.au, AJ Shine Detailing" loading="lazy"></figure>
+  </div>
+</div></section>
+
+<section class="wrap">
+  <div class="head">
+    <span class="kicker">Why us</span>
+    <h2>Why a local</h2>
+  </div>
+  <ul class="trust-list">
+    <li>I live in Doreen. You can meet me for a coffee, not a Zoom call</li>
+    <li>I&#x27;m a tradie too, so I build what a busy owner actually needs</li>
+    <li>You own your website. No rent, no lock-in, nothing to cancel</li>
+    <li>Straight prices, written down before any work starts</li>
+  </ul>
+</section>
+
+
+
+
+
+
+
+<section class="wrap">
+  <div class="head">
+    <span class="kicker">Get in touch</span>
+    <h2>Get a quote</h2>
+  </div>
+  <ul class="rows">
+    <li><b>Phone</b><a href="tel:+61450220570">0450 220 570</a></li>
+    <li><b>Area</b><span>Doreen and nearby suburbs</span></li>
+    <li><b>Email</b><span>straightind@gmail.com</span></li>
+
+  </ul>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fname">JAE Enterprise</div>
+  <p>Websites and missed-call answering for local business &middot; Doreen, Mernda, South Morang, Epping and nearby suburbs</p>
+  <div class="meta">
+    <p>&copy; 2026 JAE Enterprise</p>
+    <p style="margin-top:7px">Site by <a href="https://www.facebook.com/groups/doreenbusiness">JAE Enterprise</a></p>
+  </div>
+</div></footer>
+
+<nav class="bar"><a href="tel:+61450220570">&#9742; Tap to call 0450 220 570</a></nav>
+</body>
+</html>
