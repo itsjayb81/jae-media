@@ -10,6 +10,10 @@
 <meta property="og:title" content="NDIS Policy Templates and Compliance Kits for Providers">
 <meta property="og:description" content="Audit ready NDIS policy templates and SIL practice standards documents. Editable Word files from $247.">
 <meta property="og:url" content="https://jabenterprise.com/ndis/">
+<meta name="theme-color" content="#0e1319">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Product","name":"NDIS Starter Compliance Pack","description":"Core NDIS policy and procedure templates as editable Word documents.","brand":{"@type":"Brand","name":"JAB Enterprise"},"offers":{"@type":"Offer","price":"247","priceCurrency":"AUD","availability":"https://schema.org/InStock","url":"https://buy.stripe.com/8x2cN4ey4fjh41c917fbq00"}},
@@ -19,136 +23,399 @@
 </script>
 <style>
   :root {
-    --ink: #1c2430; --muted: #5a6573; --bg: #ffffff; --soft: #f3f6f9;
-    --line: #dde3ea; --brand: #1f5f8b; --brand-ink: #ffffff; --accent: #e8f1f8;
+    --ink: #11151b; --body: #4a5260; --muted: #6b7380; --line: #e2e6ec;
+    --bg: #ffffff; --panel: #f4f7fa; --dark: #0e1319; --dark-2: #161d26;
+    --accent: #e8a317; --accent-soft: #fdf4e3; --accent-dark: #7a4f00;
+    --ok: #1f7a4d; --radius: 14px;
   }
   * { box-sizing: border-box; }
-  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-         color: var(--ink); background: var(--bg); line-height: 1.55; font-size: 17px; }
-  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
-  header { background: var(--soft); border-bottom: 1px solid var(--line); }
-  .brand { padding-top: 14px; padding-bottom: 14px; font-weight: 700; letter-spacing: .02em; color: var(--brand); }
-  .hero { padding-top: 40px; padding-bottom: 32px; }
-  h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.15; margin: 0 0 14px; }
-  .lead { font-size: 19px; color: var(--muted); max-width: 680px; margin: 0 0 22px; }
-  .btn { display: inline-block; background: var(--brand); color: var(--brand-ink); text-decoration: none;
-         padding: 13px 22px; border-radius: 8px; font-weight: 600; }
-  .btn.ghost { background: transparent; color: var(--brand); border: 2px solid var(--brand); }
-  section { padding: 36px 0; }
-  h2 { font-size: 26px; margin: 0 0 18px; }
-  .tiers { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
-  .tier { border: 1px solid var(--line); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; }
-  .tier.best { border: 2px solid var(--brand); background: var(--accent); }
-  .tag { font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--brand); margin-bottom: 6px; }
-  .tier h3 { margin: 0 0 4px; font-size: 21px; }
-  .price { font-size: 34px; font-weight: 800; margin: 8px 0 2px; }
-  .gst { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
-  .tier ul { padding-left: 20px; margin: 0 0 18px; flex: 1; }
-  .tier li { margin-bottom: 6px; }
-  .tier .btn { text-align: center; }
-  .who { font-size: 15px; color: var(--muted); margin: 0 0 12px; }
-  .grid2 { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-  .card { background: var(--soft); border-radius: 12px; padding: 20px; }
-  .card h3 { margin: 0 0 8px; font-size: 18px; }
-  details { border-bottom: 1px solid var(--line); padding: 14px 0; }
-  summary { cursor: pointer; font-weight: 600; }
-  .fine { font-size: 14px; color: var(--muted); }
-  .btn.soon { background: #6b7785; }
-  footer { background: var(--soft); border-top: 1px solid var(--line); padding: 26px 0; margin-top: 20px; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+         color: var(--body); background: var(--bg); line-height: 1.6; font-size: 17px; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { color: var(--ink); line-height: 1.2; letter-spacing: -0.015em; }
+  a { color: var(--ink); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+  /* Top bar */
+  .top { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+  .mark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .mark-box { width: 34px; height: 34px; border-radius: 8px; background: var(--dark); color: var(--accent); display: grid; place-items: center; font-weight: 800; font-size: 13px; letter-spacing: .04em; }
+  .mark-text { font-weight: 700; color: var(--ink); line-height: 1.1; font-size: 16px; }
+  .mark-text small { display: block; font-weight: 500; color: var(--muted); font-size: 12px; }
+  .nav { display: flex; align-items: center; gap: 22px; }
+  .nav a { text-decoration: none; font-size: 15px; font-weight: 500; color: var(--body); }
+  .nav a:hover { color: var(--ink); }
+  @media (max-width: 760px) { .nav a.hide-sm { display: none; } }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; font-weight: 600;
+         padding: 13px 22px; border-radius: 10px; font-size: 16px; border: 2px solid transparent; transition: transform .12s ease, background .12s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-accent { background: var(--accent); color: var(--ink); }
+  .btn-accent:hover { background: #f0b232; }
+  .btn-dark { background: var(--ink); color: #fff; }
+  .btn-dark:hover { background: #262e3a; }
+  .btn-line { border-color: rgba(255,255,255,.35); color: #fff; }
+  .btn-line:hover { border-color: #fff; }
+  .btn-sm { padding: 9px 16px; font-size: 15px; }
+  .nav .btn { color: #fff; }
+
+  /* Hero */
+  .hero { background: var(--dark); color: #c9d1db; padding: 64px 0 72px; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; inset: auto -120px -160px auto; width: 420px; height: 420px; border-radius: 50%;
+                 background: radial-gradient(circle, rgba(232,163,23,.18), transparent 70%); pointer-events: none; }
+  .hero-grid { display: grid; gap: 48px; grid-template-columns: 1.15fr .85fr; align-items: center; }
+  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } .stack { display: none; } }
+  .eyebrow { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+             color: var(--accent); background: rgba(232,163,23,.12); border: 1px solid rgba(232,163,23,.3); padding: 6px 12px; border-radius: 999px; margin-bottom: 20px; }
+  .hero h1 { color: #fff; font-size: clamp(32px, 5.2vw, 52px); margin: 0 0 18px; font-weight: 800; }
+  .hero .lead { font-size: 19px; max-width: 600px; margin: 0 0 28px; color: #c9d1db; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+  .ticks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; font-size: 15px; }
+  .ticks li { display: flex; gap: 10px; align-items: flex-start; }
+  .ticks svg { flex: none; margin-top: 4px; }
+
+  /* Document stack illustration */
+  .stack { position: relative; height: 380px; }
+  .doc { position: absolute; width: 270px; background: #fff; border-radius: 10px; padding: 22px 20px; box-shadow: 0 24px 48px rgba(0,0,0,.35); }
+  .doc .bar { height: 7px; border-radius: 4px; background: #e6eaf0; margin-bottom: 9px; }
+  .doc .bar.s { width: 60%; } .doc .bar.m { width: 82%; }
+  .doc .head { font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--accent-dark); margin-bottom: 4px; }
+  .doc .title { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 14px; line-height: 1.25; }
+  .doc.d1 { top: 0; right: 70px; transform: rotate(-5deg); opacity: .75; }
+  .doc.d2 { top: 40px; right: 30px; transform: rotate(3deg); opacity: .9; }
+  .doc.d3 { top: 90px; right: 0; transform: rotate(-1deg); }
+  .doc .stamp { margin-top: 14px; display: inline-flex; gap: 6px; align-items: center; font-size: 12px; font-weight: 600; color: var(--ok); background: #e7f4ec; padding: 5px 10px; border-radius: 999px; }
+
+  /* Trust strip */
+  .strip { border-bottom: 1px solid var(--line); background: var(--panel); }
+  .strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding-top: 22px; padding-bottom: 22px; }
+  @media (max-width: 760px) { .strip .wrap { grid-template-columns: 1fr 1fr; } }
+  .stat strong { display: block; color: var(--ink); font-size: 22px; font-weight: 800; line-height: 1.2; }
+  .stat span { font-size: 14px; color: var(--muted); }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  .sec-head { max-width: 680px; margin: 0 0 36px; }
+  .sec-head .kicker { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-dark); margin-bottom: 8px; }
+  .sec-head h2 { font-size: clamp(26px, 3.6vw, 36px); margin: 0 0 10px; font-weight: 800; }
+  .sec-head p { margin: 0; font-size: 18px; }
+  .panel { background: var(--panel); }
+
+  /* Kits */
+  .tiers { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+  @media (max-width: 960px) { .tiers { grid-template-columns: 1fr; max-width: 560px; } }
+  .tier { position: relative; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 24px; display: flex; flex-direction: column; }
+  .tier.best { border: 2px solid var(--ink); box-shadow: 0 18px 40px rgba(17,21,27,.12); }
+  .ribbon { position: absolute; top: -13px; left: 24px; background: var(--accent); color: var(--ink); font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; }
+  .tag { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-dark); margin-bottom: 6px; }
+  .tier h3 { margin: 0 0 6px; font-size: 22px; }
+  .who { font-size: 15px; color: var(--muted); margin: 0 0 18px; min-height: 48px; }
+  .price { font-size: 42px; font-weight: 800; color: var(--ink); line-height: 1; letter-spacing: -0.02em; }
+  .price small { font-size: 16px; font-weight: 600; color: var(--muted); letter-spacing: 0; }
+  .count { font-size: 14px; color: var(--muted); margin: 8px 0 20px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .tier ul { list-style: none; padding: 0; margin: 0 0 24px; flex: 1; display: grid; gap: 10px; font-size: 15.5px; }
+  .tier li { display: flex; gap: 10px; align-items: flex-start; }
+  .tier li svg { flex: none; margin-top: 4px; }
+  .tier .btn { width: 100%; }
+  .secure { margin-top: 18px; font-size: 14px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+
+  /* Compare table */
+  .compare { width: 100%; border-collapse: collapse; background: #fff; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); font-size: 15.5px; }
+  .compare th, .compare td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--line); }
+  .compare thead th { background: var(--ink); color: #fff; font-weight: 600; font-size: 15px; }
+  .compare td.c, .compare th.c { text-align: center; width: 17%; }
+  .compare tbody tr:last-child td { border-bottom: 0; }
+  .compare .no { color: #b8bfc8; }
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  @media (max-width: 640px) { .compare { font-size: 14px; } .compare th, .compare td { padding: 11px 10px; } }
+
+  /* Steps */
+  .steps { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); counter-reset: step; }
+  @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
+  .step { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 24px; }
+  .step::before { counter-increment: step; content: counter(step); display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px;
+                  background: var(--ink); color: var(--accent); font-weight: 800; margin-bottom: 14px; }
+  .step h3 { margin: 0 0 6px; font-size: 19px; }
+  .step p { margin: 0; font-size: 16px; }
+
+  /* Free sample */
+  .sample { background: var(--accent-soft); border: 1px solid #f1d9a6; border-radius: var(--radius); padding: 32px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+  @media (max-width: 760px) { .sample { grid-template-columns: 1fr; padding: 24px; } }
+  .sample h2 { margin: 0 0 8px; font-size: 26px; }
+  .sample p { margin: 0; }
+
+  /* Benefits */
+  .grid3 { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 860px) { .grid3 { grid-template-columns: 1fr; } }
+  .card { padding: 4px 0; }
+  .card .ic { width: 44px; height: 44px; border-radius: 12px; background: var(--panel); display: grid; place-items: center; margin-bottom: 14px; }
+  .card h3 { margin: 0 0 6px; font-size: 19px; }
+  .card p { margin: 0; }
+
+  /* FAQ */
+  .faq { max-width: 820px; }
+  details { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 0 20px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; color: var(--ink); padding: 18px 28px 18px 0; list-style: none; position: relative; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; position: absolute; right: 0; top: 14px; font-size: 24px; font-weight: 400; color: var(--muted); }
+  details[open] summary::after { content: "\2212"; }
+  details p { margin: 0 0 18px; }
+
+  /* Terms */
+  .terms { display: grid; gap: 18px 36px; grid-template-columns: 1fr 1fr; font-size: 15.5px; }
+  @media (max-width: 760px) { .terms { grid-template-columns: 1fr; } }
+  .terms h3 { font-size: 16px; margin: 0 0 4px; }
+  .terms p { margin: 0; }
+
+  /* Footer */
+  footer { background: var(--dark); color: #9aa4b1; padding: 44px 0 32px; font-size: 15px; }
+  footer a { color: #fff; }
+  .foot-grid { display: grid; gap: 24px; grid-template-columns: 1.4fr 1fr; align-items: start; }
+  @media (max-width: 760px) { .foot-grid { grid-template-columns: 1fr; } }
+  footer .mark-text { color: #fff; }
+  footer .fine { font-size: 13px; color: #7d8794; border-top: 1px solid #222b36; margin-top: 28px; padding-top: 20px; }
+  footer p { margin: 0 0 8px; }
 </style>
 </head>
 <body>
-<header><div class="wrap brand">JAB Enterprise</div></header>
 
-<div class="wrap hero">
-  <h1>NDIS policies and procedures, ready for your audit.</h1>
-  <p class="lead">Editable Word templates mapped to the NDIS Practice Standards, including the new Supported Independent Living standards. Fill in your details, match them to how you work, and walk into your audit prepared.</p>
-  <a class="btn" href="#kits">See the kits</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tick" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".14"/><path d="M5.8 10.4l2.7 2.6 5.7-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="lock" viewBox="0 0 20 20"><rect x="4" y="9" width="12" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 9V6.5a3 3 0 016 0V9" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="JAB Enterprise home">
+      <span class="mark-box">JAB</span>
+      <span class="mark-text">JAB Enterprise<small>NDIS Compliance Kits</small></span>
+    </a>
+    <nav class="nav">
+      <a class="hide-sm" href="#compare">Compare</a>
+      <a class="hide-sm" href="#faq">Questions</a>
+      <a class="btn btn-dark btn-sm" href="#kits">Choose a kit</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Updated for the SIL rules after 1 October 2026</span>
+      <h1>NDIS policies and procedures, ready for your audit.</h1>
+      <p class="lead">Editable Word templates mapped to the NDIS Practice Standards, including the new Supported Independent Living standards. Fill in your details, match them to how you work, and walk into your audit prepared.</p>
+      <div class="cta-row">
+        <a class="btn btn-accent" href="#kits">See the kits</a>
+        <a class="btn btn-line" href="#sample">Get a free sample</a>
+      </div>
+      <ul class="ticks">
+        <li><svg width="18" height="18" style="color:var(--accent)"><use href="#tick"/></svg>Written to the NDIS Practice Standards</li>
+        <li><svg width="18" height="18" style="color:var(--accent)"><use href="#tick"/></svg>Emailed to you within minutes of payment</li>
+        <li><svg width="18" height="18" style="color:var(--accent)"><use href="#tick"/></svg>Australian business, ABN 18 769 926 134</li>
+      </ul>
+    </div>
+    <div class="stack" aria-hidden="true">
+      <div class="doc d1"><div class="head">Policy</div><div class="title">Risk Management Policy</div><div class="bar"></div><div class="bar m"></div><div class="bar s"></div></div>
+      <div class="doc d2"><div class="head">Agreement</div><div class="title">Service Agreement</div><div class="bar"></div><div class="bar m"></div><div class="bar"></div><div class="bar s"></div></div>
+      <div class="doc d3"><div class="head">Audit</div><div class="title">Evidence Folder Structure</div><div class="bar"></div><div class="bar m"></div><div class="bar"></div><div class="bar s"></div><div class="bar m"></div><span class="stamp"><svg width="14" height="14"><use href="#tick"/></svg>Audit ready</span></div>
+    </div>
+  </div>
 </div>
 
-<section id="kits" class="wrap">
-  <h2>Choose your kit</h2>
-  <div class="tiers">
-    <div class="tier">
-      <div class="tag">Getting started</div>
-      <h3>Starter Compliance Pack</h3>
-      <p class="who">For new or small providers putting core paperwork in place.</p>
-      <div class="price">$247</div><div class="gst">One off payment. 8 documents.</div>
-      <ul>
-        <li>Risk management policy</li>
-        <li>Incident management policy and incident report form</li>
-        <li>Complaints management policy</li>
-        <li>Privacy and consent policy</li>
-        <li>WHS policy</li>
-        <li>Code of Conduct policy</li>
-        <li>Worker screening and orientation guide</li>
-      </ul>
-      <a class="btn" href="https://buy.stripe.com/8x2cN4ey4fjh41c917fbq00">Buy the Starter Pack</a>
-    </div>
+<div class="strip">
+  <div class="wrap">
+    <div class="stat"><strong>36</strong><span>editable Word documents</span></div>
+    <div class="stat"><strong>3 kits</strong><span>from $247, one off</span></div>
+    <div class="stat"><strong>Minutes</strong><span>to your inbox after payment</span></div>
+    <div class="stat"><strong>Stripe</strong><span>secure card payments</span></div>
+  </div>
+</div>
 
-    <div class="tier best">
-      <div class="tag">Most complete for Core</div>
-      <h3>Full Core Compliance Kit</h3>
-      <p class="who">For providers registering or preparing for a verification or certification audit.</p>
-      <div class="price">$697</div><div class="gst">One off payment. 29 documents plus a registration guide.</div>
-      <ul>
-        <li>Everything in the Starter Pack</li>
-        <li>Business set up: roadmap, checklist, insurance, registration walkthrough</li>
-        <li>Service agreements, schedule of supports, cancellation policy, Easy Read summary</li>
-        <li>Audit checklist, evidence folder structure, mock audit questions and answers</li>
-        <li>Choosing your auditor, audit cost planner, audit failure pre flight</li>
-        <li>Daily operations: progress notes, support plan, shift handover, goal tracker</li>
-      </ul>
-      <a class="btn" href="https://buy.stripe.com/bJe00i0He8UTbtEcdjfbq01">Buy the Core Kit</a>
+<section id="kits">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">The kits</div>
+      <h2>Choose the kit that fits your business</h2>
+      <p>One payment, no subscription. Upgrade later by paying the difference.</p>
     </div>
+    <div class="tiers">
+      <div class="tier">
+        <div class="tag">Getting started</div>
+        <h3>Starter Compliance Pack</h3>
+        <p class="who">For new or small providers putting core paperwork in place.</p>
+        <div class="price">$247 <small>AUD</small></div>
+        <div class="count">One off payment. 8 documents.</div>
+        <ul>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Risk management policy</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Incident management policy and incident report form</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Complaints management policy</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Privacy and consent policy</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>WHS policy</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Code of Conduct policy</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Worker screening and orientation guide</li>
+        </ul>
+        <a class="btn btn-dark" href="https://buy.stripe.com/8x2cN4ey4fjh41c917fbq00">Buy the Starter Pack</a>
+      </div>
 
-    <div class="tier">
-      <div class="tag">For SIL providers</div>
-      <h3>SIL Audit Ready Complete Kit</h3>
-      <p class="who">For Supported Independent Living providers facing a certification audit.</p>
-      <div class="price">$1,497</div><div class="gst">One off payment. All 36 documents plus a registration guide.</div>
-      <ul>
-        <li>Everything in the Full Core Kit</li>
-        <li>SIL supplementary module: the new SIL Practice Standards explained</li>
-        <li>Core Module self assessment across all four sections</li>
-        <li>Certification audit cost and booking guide</li>
-        <li>Personal liability brief for owners and directors</li>
-      </ul>
-      <a class="btn" href="https://buy.stripe.com/28E00i9dKb31fJUdhnfbq02">Buy the SIL Kit</a>
+      <div class="tier best">
+        <span class="ribbon">Recommended</span>
+        <div class="tag">Most complete for Core</div>
+        <h3>Full Core Compliance Kit</h3>
+        <p class="who">For providers registering or preparing for a verification or certification audit.</p>
+        <div class="price">$697 <small>AUD</small></div>
+        <div class="count">One off payment. 29 documents plus a registration guide.</div>
+        <ul>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Everything in the Starter Pack</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Business set up: roadmap, checklist, insurance, registration walkthrough</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Service agreements, schedule of supports, cancellation policy, Easy Read summary</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Audit checklist, evidence folder structure, mock audit questions and answers</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Choosing your auditor, audit cost planner, audit failure pre flight</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Daily operations: progress notes, support plan, shift handover, goal tracker</li>
+        </ul>
+        <a class="btn btn-accent" href="https://buy.stripe.com/bJe00i0He8UTbtEcdjfbq01">Buy the Core Kit</a>
+      </div>
+
+      <div class="tier">
+        <div class="tag">For SIL providers</div>
+        <h3>SIL Audit Ready Complete Kit</h3>
+        <p class="who">For Supported Independent Living providers facing a certification audit.</p>
+        <div class="price">$1,497 <small>AUD</small></div>
+        <div class="count">One off payment. All 36 documents plus a registration guide.</div>
+        <ul>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Everything in the Full Core Kit</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>SIL supplementary module: the new SIL Practice Standards explained</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Core Module self assessment across all four sections</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Certification audit cost and booking guide</li>
+          <li><svg width="18" height="18" style="color:var(--ok)"><use href="#tick"/></svg>Personal liability brief for owners and directors</li>
+        </ul>
+        <a class="btn btn-dark" href="https://buy.stripe.com/28E00i9dKb31fJUdhnfbq02">Buy the SIL Kit</a>
+      </div>
+    </div>
+    <p class="secure"><svg width="16" height="16"><use href="#lock"/></svg>Checkout is handled by Stripe. We never see your card details.</p>
+  </div>
+</section>
+
+<section id="compare" class="panel">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Side by side</div>
+      <h2>What is in each kit</h2>
+    </div>
+    <div class="table-scroll">
+      <table class="compare">
+        <thead><tr><th>Included</th><th class="c">Starter</th><th class="c">Core</th><th class="c">SIL</th></tr></thead>
+        <tbody>
+          <tr><td>Core policies: risk, incidents, complaints, privacy, WHS, code of conduct</td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td></tr>
+          <tr><td>Worker screening and orientation guide</td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td></tr>
+          <tr><td>Business set up and registration walkthrough</td><td class="c no" aria-label="No">&ndash;</td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td></tr>
+          <tr><td>Service agreements and Easy Read summary</td><td class="c no" aria-label="No">&ndash;</td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td></tr>
+          <tr><td>Audit checklist, evidence folder and mock audit questions</td><td class="c no" aria-label="No">&ndash;</td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td></tr>
+          <tr><td>Daily operations templates</td><td class="c no" aria-label="No">&ndash;</td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td></tr>
+          <tr><td>SIL Practice Standards module</td><td class="c no" aria-label="No">&ndash;</td><td class="c no" aria-label="No">&ndash;</td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td></tr>
+          <tr><td>Core Module self assessment</td><td class="c no" aria-label="No">&ndash;</td><td class="c no" aria-label="No">&ndash;</td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td></tr>
+          <tr><td>Certification audit cost and booking guide</td><td class="c no" aria-label="No">&ndash;</td><td class="c no" aria-label="No">&ndash;</td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td></tr>
+          <tr><td>Personal liability brief for owners and directors</td><td class="c no" aria-label="No">&ndash;</td><td class="c no" aria-label="No">&ndash;</td><td class="c"><svg width="20" height="20" style="color:var(--ok)" aria-label="Yes"><use href="#tick"/></svg></td></tr>
+          <tr><td><strong>Documents</strong></td><td class="c"><strong>8</strong></td><td class="c"><strong>29 + guide</strong></td><td class="c"><strong>36 + guide</strong></td></tr>
+          <tr><td><strong>Price</strong></td><td class="c"><strong>$247</strong></td><td class="c"><strong>$697</strong></td><td class="c"><strong>$1,497</strong></td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 
-<section class="wrap">
-  <h2>Why providers use these kits</h2>
-  <div class="grid2">
-    <div class="card"><h3>Not a blank page</h3><p>Every document is written and laid out. You add your business details and adjust it to your practice.</p></div>
-    <div class="card"><h3>Built for the audit</h3><p>Mapped to the Practice Standards, with an evidence folder guide and the questions auditors actually ask.</p></div>
-    <div class="card"><h3>Editable Word files</h3><p>Open them in Word or Google Docs. Change anything. Print or keep them digital.</p></div>
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">How it works</div>
+      <h2>From payment to paperwork in minutes</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Choose your kit</h3><p>Pick the kit that matches where your business is at, and pay securely by card.</p></div>
+      <div class="step"><h3>Check your inbox</h3><p>A download link arrives by email within minutes. It stays valid for 7 days.</p></div>
+      <div class="step"><h3>Make it yours</h3><p>Open the Word files, add your business details and adjust them to how you actually work.</p></div>
+    </div>
   </div>
 </section>
 
-<section class="wrap">
-  <h2>Questions</h2>
-  <details><summary>How do I get the documents?</summary><p>After payment you receive a download link by email, usually within a few minutes and always within one business day. Check your spam folder if it has not arrived.</p></details>
-  <details><summary>Can I edit them?</summary><p>Yes. They are standard Word documents. Replace the bracketed details and change anything that does not match how you work. Auditors check that your documents match your practice.</p></details>
-  <details><summary>Do these guarantee I pass my audit?</summary><p>No template can promise that. The audit looks at how you actually work, not just your paperwork. These kits give you a complete, well organised starting point.</p></details>
-  <details><summary>Is this legal advice?</summary><p>No. These are templates and general information. Check current requirements with the NDIS Quality and Safeguards Commission, and get professional advice for your situation.</p></details>
-  <details><summary>Can I upgrade later?</summary><p>Yes. Reply to your purchase email and pay the difference between kits.</p></details>
+<section id="sample" style="padding-top:0">
+  <div class="wrap">
+    <div class="sample">
+      <div>
+        <h2>Try one first, free</h2>
+        <p>Download our complaints management policy, the same one that is in every kit. Editable Word file, no sign up.</p>
+      </div>
+      <a class="btn btn-dark" href="/ndis/free/NDIS-Complaints-Management-Policy-FREE.docx">Download the free policy</a>
+    </div>
+  </div>
 </section>
 
-<section class="wrap" id="policies">
-  <h2>Refunds and terms</h2>
-  <p><strong>Refunds.</strong> These are digital files, so we do not give refunds for change of mind once the download link has been sent. If a file is faulty, will not open or is missing, email us and we will fix or replace it within two business days, or refund you if we cannot. If you were charged twice or by mistake, we will refund you in full. Nothing here limits your rights under the Australian Consumer Law.</p>
-  <p><strong>Licence.</strong> Each kit is licensed to one business. You may edit and use the documents in your own business. You may not resell or share them.</p>
-  <p><strong>Delivery.</strong> Kits are delivered by email as a download link, usually within a few minutes of payment and always within one business day.</p>
-  <p><strong>Payments.</strong> Prices are in Australian dollars. Payments are processed securely by Stripe. We never see your card details.</p>
-  <p><strong>Contact.</strong> Email <a href="mailto:straightind@gmail.com">straightind@gmail.com</a>. Based in Doreen, Victoria, Australia.</p>
+<section class="panel">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Why providers use these kits</div>
+      <h2>Built for small providers who are short on time</h2>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#11151b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+        <h3>Not a blank page</h3><p>Every document is written and laid out. You add your business details and adjust it to your practice.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#11151b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h9"/></svg></div>
+        <h3>Built for the audit</h3><p>Mapped to the Practice Standards, with an evidence folder guide and the questions auditors actually ask.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#11151b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></div>
+        <h3>Editable Word files</h3><p>Open them in Word or Google Docs. Change anything. Print or keep them digital.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq">
+    <div class="sec-head">
+      <div class="kicker">Questions</div>
+      <h2>Before you buy</h2>
+    </div>
+    <details><summary>How do I get the documents?</summary><p>After payment you receive a download link by email, usually within a few minutes and always within one business day. Check your spam folder if it has not arrived.</p></details>
+    <details><summary>Can I edit them?</summary><p>Yes. They are standard Word documents. Replace the bracketed details and change anything that does not match how you work. Auditors check that your documents match your practice.</p></details>
+    <details><summary>Do these guarantee I pass my audit?</summary><p>No template can promise that. The audit looks at how you actually work, not just your paperwork. These kits give you a complete, well organised starting point.</p></details>
+    <details><summary>Is this legal advice?</summary><p>No. These are templates and general information. Check current requirements with the NDIS Quality and Safeguards Commission, and get professional advice for your situation.</p></details>
+    <details><summary>Can I upgrade later?</summary><p>Yes. Reply to your purchase email and pay the difference between kits.</p></details>
+  </div>
+</section>
+
+<section id="policies" class="panel">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">The fine print</div>
+      <h2>Refunds and terms</h2>
+    </div>
+    <div class="terms">
+      <div><h3>Refunds</h3><p>These are digital files, so we do not give refunds for change of mind once the download link has been sent. If a file is faulty, will not open or is missing, email us and we will fix or replace it within two business days, or refund you if we cannot. If you were charged twice or by mistake, we will refund you in full. Nothing here limits your rights under the Australian Consumer Law.</p></div>
+      <div><h3>Licence</h3><p>Each kit is licensed to one business. You may edit and use the documents in your own business. You may not resell or share them.</p></div>
+      <div><h3>Delivery</h3><p>Kits are delivered by email as a download link, usually within a few minutes of payment and always within one business day.</p></div>
+      <div><h3>Payments</h3><p>Prices are in Australian dollars. Payments are processed securely by Stripe. We never see your card details.</p></div>
+      <div><h3>Contact</h3><p>Email <a href="mailto:sales@jabenterprise.com">sales@jabenterprise.com</a>. Based in Doreen, Victoria, Australia.</p></div>
+    </div>
+  </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p><strong>JAB Enterprise</strong> (registered business name JABENTERPRI$E, Jason Boyle, sole trader) &middot; ABN 18 769 926 134 &middot; Doreen, Victoria &middot; <a href="mailto:straightind@gmail.com">straightind@gmail.com</a> &middot; <a href="#policies">Refunds and terms</a></p>
+    <div class="foot-grid">
+      <div>
+        <p class="mark-text" style="font-size:18px;margin-bottom:10px">JAB Enterprise</p>
+        <p>Registered business name JABENTERPRI$E, Jason Boyle, sole trader.<br>ABN 18 769 926 134 &middot; Doreen, Victoria</p>
+      </div>
+      <div>
+        <p><a href="mailto:sales@jabenterprise.com">sales@jabenterprise.com</a></p>
+        <p><a href="#policies">Refunds and terms</a> &middot; <a href="#faq">Questions</a></p>
+      </div>
+    </div>
     <p class="fine">General information and templates only, not legal advice. JAB Enterprise is not affiliated with the NDIS, the NDIA or the NDIS Quality and Safeguards Commission. Check current requirements at ndiscommission.gov.au.</p>
   </div>
 </footer>
