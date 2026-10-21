@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Google Review QR for SEA Businesses · JAB Enterprise</title>
+<meta name="description" content="Starting a business through SEA? The first 20 people with a Google Business Profile get a free QR code that opens their Google review box in one tap. Plus a free starter checklist.">
+<meta property="og:title" content="Free Google Review QR for SEA Businesses · JAB Enterprise">
+<meta property="og:description" content="The first 20 people with a Google Business Profile get a free review QR code. Plus a free starter checklist.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23e8a317'/><text x='16' y='23' font-size='19' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'>J</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#e8a317; --onaccent:#11151b; --accent-dark:#7a4f00;
+  --ink:#11151b; --body:#4a5260; --line:#e2e6ec;
+  --bg:#ffffff; --panel:#f4f7fa; --dark:#0e1319;
+  --shadow:0 2px 4px rgba(16,24,40,.04),0 12px 28px rgba(16,24,40,.09);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--body);font:400 17px/1.7 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Barlow Condensed",Impact,sans-serif;font-weight:800;color:var(--ink);line-height:1.03;text-transform:uppercase}
+.wrap{max-width:1080px;margin:0 auto;padding-left:20px;padding-right:20px}
+section{padding-top:68px;padding-bottom:68px}
+.alt{background:var(--panel)}
+
+.topbar{background:var(--dark);color:#fff;padding:11px 0;font-size:14.5px}
+.topbar .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center;justify-content:space-between}
+.topbar a{color:var(--accent);font-weight:700;text-decoration:none}
+
+.hero{position:relative;background:#7a4f00;overflow:hidden;padding:84px 0 76px}
+.hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2260%22%20height=%2260%22%3E%3Cpath%20d=%22M0%2060L60%200M-15%2015L15%20-15M45%2075L75%2045%22%20stroke=%22%23ffffff%22%20stroke-opacity=%220.07%22%20stroke-width=%2214%22/%3E%3C/svg%3E")}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,14,19,.95) 0%,rgba(10,14,19,.82) 50%,rgba(10,14,19,.55) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.hero-inner{max-width:680px}
+.eyebrow{display:inline-block;background:var(--accent);color:var(--onaccent);font-family:"Barlow Condensed",sans-serif;font-size:16px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:7px 15px;margin-bottom:20px}
+h1{font-size:clamp(42px,9.5vw,80px);color:#fff;margin-bottom:18px}
+h1 .hl{color:var(--accent);display:block}
+.tagline{font-size:clamp(17px,2.3vw,20px);color:#d3dae4;max-width:52ch;line-height:1.6}
+.spots{display:inline-flex;align-items:center;gap:12px;margin-top:26px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);padding:12px 18px;color:#fff;font-weight:600}
+.spots b{font-family:"Barlow Condensed",sans-serif;font-size:34px;color:var(--accent);line-height:1}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:17px 30px;font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:2px solid var(--accent);min-height:58px;background:var(--accent);color:var(--onaccent);cursor:pointer;transition:transform .12s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn[disabled]{opacity:.55;cursor:wait;transform:none}
+.btns{display:flex;flex-wrap:wrap;gap:13px;margin-top:28px}
+
+.head{margin-bottom:34px;max-width:62ch}
+.kicker{font-family:"Barlow Condensed",sans-serif;color:var(--accent-dark);font-size:17px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;display:block;margin-bottom:9px}
+h2{font-size:clamp(32px,5.4vw,50px);margin-bottom:12px}
+
+.steps{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));counter-reset:s}
+.step{background:var(--bg);border:1px solid var(--line);border-top:4px solid var(--accent);padding:26px 24px;box-shadow:var(--shadow);counter-increment:s}
+.step::before{content:counter(s);display:block;font-family:"Barlow Condensed",sans-serif;font-size:44px;font-weight:800;color:var(--accent);line-height:1;margin-bottom:8px}
+.step h3{font-size:23px;margin-bottom:6px}
+.step p{font-size:16px;line-height:1.6}
+.fine{margin-top:22px;font-size:15px;max-width:66ch}
+
+/* checklist */
+.check{list-style:none;display:grid;gap:12px;max-width:760px}
+.check label{display:flex;gap:15px;align-items:flex-start;background:var(--bg);border:1px solid var(--line);padding:16px 18px;cursor:pointer;box-shadow:var(--shadow)}
+.check input{appearance:none;-webkit-appearance:none;flex:0 0 28px;width:28px;height:28px;border:2px solid var(--accent);margin-top:2px;cursor:pointer;display:grid;place-content:center}
+.check input:checked{background:var(--accent)}
+.check input:checked::after{content:"\2713";color:var(--onaccent);font-weight:800;font-size:17px}
+.check b{display:block;color:var(--ink);font-size:17px;line-height:1.4}
+.check span{display:block;font-size:15px;line-height:1.55;margin-top:3px}
+.check input:checked + div b{text-decoration:line-through;text-decoration-color:var(--accent);text-decoration-thickness:2px}
+.score{margin-top:20px;font-weight:700;color:var(--ink)}
+.score b{color:var(--accent-dark)}
+
+/* form */
+.book{background:#0f1216;color:#c6cfda}
+.book h2{color:#fff}
+.book .kicker{color:var(--accent)}
+.book form{display:grid;gap:16px;max-width:580px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+.book label.f{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#93a1b2;margin-bottom:6px;font-weight:700}
+.book input[type=text],.book input[type=email],.book input[type=tel],.book input[type=url],.book select,.book textarea{width:100%;background:#171c22;border:1px solid #2b333d;color:#f2f5f8;border-radius:10px;padding:13px 14px;font:inherit;font-size:16px}
+.book input:focus,.book select:focus,.book textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px #e8a31733}
+.book textarea{min-height:88px;resize:vertical}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.choice label{display:flex;align-items:center;gap:10px;background:#171c22;border:1px solid #2b333d;border-radius:10px;padding:14px;color:#f2f5f8;cursor:pointer;font-weight:600}
+.choice input{accent-color:var(--accent);width:20px;height:20px}
+.tickrow{display:flex;gap:10px;align-items:flex-start;color:#c6cfda;font-size:15px;line-height:1.5}
+.tickrow input{accent-color:var(--accent);width:20px;height:20px;margin-top:2px;flex:0 0 20px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.note{color:#8a97a6;font-size:14px;line-height:1.55}
+.note a{color:var(--accent)}
+.hide{display:none}
+.msg{margin-top:6px;font-weight:700;display:none;padding:16px;border-radius:10px;line-height:1.55}
+.msg.ok{display:block;color:#0f1216;background:#5fd08a}
+.msg.bad{display:block;color:#0f1216;background:#ff9f9f}
+
+footer{background:var(--dark);color:#8c98a8;padding:46px 0 50px;font-size:14.5px}
+footer .fname{font-family:"Barlow Condensed",sans-serif;font-size:29px;font-weight:800;color:#fff;text-transform:uppercase;margin-bottom:9px}
+footer a{color:var(--accent);text-decoration:none}
+@media (max-width:640px){
+  section{padding-top:52px;padding-bottom:52px}
+  .hero{padding:60px 0 56px}
+  .btn{width:100%}
+  .choice{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>For people starting a business through SEA</span>
+  <a href="/">jabenterprise.com</a>
+</div></div>
+
+<header class="hero"><div class="wrap"><div class="hero-inner">
+  <span class="eyebrow">SEA participants · free offer</span>
+  <h1>Get more Google reviews <span class="hl">Free QR code</span></h1>
+  <p class="tagline">The first 20 people with a Google Business Profile get a free QR code that opens their Google review box in one tap. Put it on your counter, your van, your invoices. Customers scan, tap the stars, done.</p>
+  <div class="spots" id="spots" aria-live="polite"><b id="left">20</b><span>of 20 free spots left</span></div>
+  <div class="btns"><a class="btn" href="#signup">Claim my free QR</a></div>
+</div></div></header>
+
+<main>
+<section class="wrap">
+  <div class="head">
+    <span class="kicker">How it works</span>
+    <h2>Three steps</h2>
+    <p>Reviews are one of the biggest things that get a local business found on Google. This makes asking for one easy.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><h3>You sign up</h3><p>Fill in the form below with the link to your Google Business Profile.</p></div>
+    <div class="step"><h3>I make your QR</h3><p>I build a QR code that goes straight to your review box, then scan it myself to check it works.</p></div>
+    <div class="step"><h3>You print it</h3><p>I email it to you, ready to print or add to a flyer, business card or invoice.</p></div>
+  </div>
+  <p class="fine"><b>The fine print:</b> one free QR per business. You need a Google Business Profile that is live on Google Maps. No profile yet? Sign up anyway and tick what you need help with. It does not use one of the 20 spots.</p>
+</section>
+
+<section class="alt"><div class="wrap">
+  <div class="head">
+    <span class="kicker">Free starter checklist</span>
+    <h2>Getting found online</h2>
+    <p>The basics every new business needs. Tick them off as you go. Your ticks stay on this device.</p>
+  </div>
+  <ul class="check" id="check">
+    <li><label><input type="checkbox" data-k="gbp"><div><b>Claim your Google Business Profile</b><span>Free at business.google.com. Add your hours, phone, service area and real photos, then finish Google's verification.</span></div></label></li>
+    <li><label><input type="checkbox" data-k="name"><div><b>Use the same business name everywhere</b><span>Same spelling on Google, Facebook, your website and your invoices. Mixed names confuse people and Google.</span></div></label></li>
+    <li><label><input type="checkbox" data-k="domain"><div><b>Get a web address in your business name</b><span>Short, easy to spell, easy to say out loud. Usually about $20 to $30 a year.</span></div></label></li>
+    <li><label><input type="checkbox" data-k="site"><div><b>Put up a simple website</b><span>One page is enough to start. Who you are, what you do, the area you cover, and a big tap-to-call button that works on a phone.</span></div></label></li>
+    <li><label><input type="checkbox" data-k="form"><div><b>Add a way to collect details</b><span>A contact form or sign-up box so you can keep in touch. Always let people opt out.</span></div></label></li>
+    <li><label><input type="checkbox" data-k="link"><div><b>Link everything together</b><span>Website on your Google profile. Google and website on your Facebook and Instagram. Every one points to the others.</span></div></label></li>
+    <li><label><input type="checkbox" data-k="qr"><div><b>Make asking for a review easy</b><span>A review link and QR code on your counter, van, invoices and emails. That is the free offer on this page.</span></div></label></li>
+    <li><label><input type="checkbox" data-k="ask"><div><b>Ask your first 5 customers for a review</b><span>Ask in person, right after a job goes well. Never pay or reward anyone for a review, it is against Google's rules.</span></div></label></li>
+  </ul>
+  <p class="score" id="score">You have done <b>0 of 8</b>.</p>
+</div></section>
+
+<section class="book" id="signup"><div class="wrap">
+  <div class="head">
+    <span class="kicker">Claim your spot</span>
+    <h2>Free QR sign-up</h2>
+    <p>Takes about a minute.</p>
+  </div>
+  <form id="f" novalidate>
+    <div class="two">
+      <div><label class="f" for="name">Your name</label><input type="text" id="name" name="name" autocomplete="name" required></div>
+      <div><label class="f" for="business">Business name</label><input type="text" id="business" name="business" autocomplete="organization" required></div>
+    </div>
+    <div class="two">
+      <div><label class="f" for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+      <div><label class="f" for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+    </div>
+    <div><label class="f" for="state">State</label>
+      <select id="state" name="state" required>
+        <option value="">Choose one</option>
+        <option>VIC</option><option>NSW</option><option>QLD</option><option>SA</option>
+        <option>WA</option><option>TAS</option><option>ACT</option><option>NT</option>
+      </select></div>
+    <div><span class="f" style="display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#93a1b2;margin-bottom:6px;font-weight:700">Do you have a Google Business Profile?</span>
+      <div class="choice">
+        <label><input type="radio" name="hasProfile" value="yes"> Yes, it is live</label>
+        <label><input type="radio" name="hasProfile" value="no"> Not yet</label>
+      </div></div>
+    <div id="yesBox" class="hide"><label class="f" for="listing">Link to your Google profile</label>
+      <input type="url" id="listing" name="listing" placeholder="https://maps.app.goo.gl/..." inputmode="url">
+      <p class="note" style="margin-top:6px">Find your business on Google Maps, tap Share, then Copy link, and paste it here.</p></div>
+    <div id="noBox" class="hide"><label class="f" for="help">What would help most?</label>
+      <textarea id="help" name="help" placeholder="For example: setting up my Google profile, a website, getting my first reviews"></textarea>
+      <p class="note" style="margin-top:6px">No profile yet is fine. This does not use one of the 20 spots, and I will be in touch.</p></div>
+    <label class="tickrow"><input type="checkbox" id="updates" name="updates"> Email me now and then with tips on getting found online. I can unsubscribe any time.</label>
+    <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" id="hp" name="hp" tabindex="-1" autocomplete="off"></label></div>
+    <button class="btn" type="submit" id="go">Send my sign-up</button>
+    <div class="msg" id="msg" role="status"></div>
+    <p class="note">Your details are only used to make your QR code and get back to you. They are never sold or shared. Questions? Call Jay on <a href="tel:+61450220570">0450 220 570</a>.</p>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fname">JAB Enterprise</div>
+  <p>Websites, Google reviews and missed-call answering for small business. <a href="/">See what we do</a></p>
+  <p style="margin-top:14px">&copy; 2026 JAB Enterprise</p>
+</div></footer>
+
+<script>
+// Paste the Apps Script web app URL here once Jay deploys it. Empty = form shows "not open yet".
+var SIGNUP_URL = 'https://script.google.com/macros/s/AKfycbx25Uocv7QhSY7i5I_qGB_azllTm02Q5MSPBjX_5zgtjQHn19bXxmFpRpJgdUPllX_e/exec';
+
+(function(){
+  // ---- checklist, saved on this device only ----
+  var boxes = document.querySelectorAll('#check input');
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem('jab-sea-check') || '{}'); } catch(e) {}
+  function score(){
+    var n = 0; boxes.forEach(function(b){ if (b.checked) n++; });
+    document.getElementById('score').innerHTML = 'You have done <b>' + n + ' of ' + boxes.length + '</b>.' + (n === boxes.length ? ' Great work.' : '');
+  }
+  boxes.forEach(function(b){
+    b.checked = !!saved[b.dataset.k];
+    b.addEventListener('change', function(){
+      saved[b.dataset.k] = b.checked;
+      try { localStorage.setItem('jab-sea-check', JSON.stringify(saved)); } catch(e) {}
+      score();
+    });
+  });
+  score();
+
+  // ---- spots left ----
+  function showLeft(n){
+    if (typeof n !== 'number') return;
+    document.getElementById('left').textContent = n;
+    if (n <= 0) document.querySelector('#spots span').textContent = 'free spots left. All taken, sign up for the waitlist';
+  }
+  if (SIGNUP_URL) {
+    fetch(SIGNUP_URL).then(function(r){ return r.json(); }).then(function(d){ showLeft(d.left); }).catch(function(){});
+  }
+
+  // ---- form ----
+  var f = document.getElementById('f'), msg = document.getElementById('msg'), go = document.getElementById('go');
+  f.querySelectorAll('input[name=hasProfile]').forEach(function(r){
+    r.addEventListener('change', function(){
+      document.getElementById('yesBox').classList.toggle('hide', r.value !== 'yes');
+      document.getElementById('noBox').classList.toggle('hide', r.value !== 'no');
+    });
+  });
+  function say(text, ok){ msg.className = 'msg ' + (ok ? 'ok' : 'bad'); msg.textContent = text; }
+
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = function(id){ return document.getElementById(id).value.trim(); };
+    var hp = f.querySelector('input[name=hasProfile]:checked');
+    if (!v('name') || !v('business') || !v('state')) return say('Please fill in your name, business name and state.');
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))) return say('Please check your email address.');
+    if (!hp) return say('Please tell me if you have a Google Business Profile.');
+    if (hp.value === 'yes' && !/^https?:\/\/\S*(google|goo\.gl)/i.test(v('listing'))) return say('Please paste the link to your Google profile. On Google Maps tap Share, then Copy link.');
+    if (!SIGNUP_URL) return say('Sign-ups are not open yet. Please call Jay on 0450 220 570.');
+
+    var data = { name:v('name'), business:v('business'), email:v('email'), phone:v('phone'), state:v('state'),
+      hasProfile:hp.value, listing:v('listing'), help:v('help'), updates:document.getElementById('updates').checked, hp:v('hp') };
+    go.disabled = true; go.textContent = 'Sending...';
+    fetch(SIGNUP_URL, { method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify(data) })
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if (!d.ok) throw new Error('no');
+        showLeft(d.left);
+        if (d.dup) say('You are already signed up with that email. I will be in touch.', true);
+        else if (d.gotQr) say('You are in. Your free QR code is coming to your email.', true);
+        else if (data.hasProfile === 'yes') say('Thanks. All 20 free spots are taken, but you are on the waitlist and I will be in touch.', true);
+        else say('Thanks. I have your details and will be in touch about getting your Google profile set up.', true);
+        f.querySelectorAll('input,select,textarea,button').forEach(function(x){ x.disabled = true; });
+        go.textContent = 'Sent';
+      })
+      .catch(function(){
+        go.disabled = false; go.textContent = 'Send my sign-up';
+        say('That did not send. Please try again, or call Jay on 0450 220 570.');
+      });
+  });
+})();
+</script>
+</body>
+</html>
