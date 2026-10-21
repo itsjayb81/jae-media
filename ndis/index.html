@@ -419,5 +419,20 @@
     <p class="fine">General information and templates only, not legal advice. JAB Enterprise is not affiliated with the NDIS, the NDIA or the NDIS Quality and Safeguards Commission. Check current requirements at ndiscommission.gov.au.</p>
   </div>
 </footer>
+<script>
+/* Partner tracking: jabenterprise.com/ndis/?p=jess tags every Buy button so the sale is credited. */
+(function(){
+  var ok={jay:1,jess:1,bianca:1},KEY="jab_partner",DAYS=30,p="";
+  try{
+    var q=(new URLSearchParams(location.search).get("p")||"").toLowerCase().replace(/[^a-z0-9_-]/g,"");
+    if(ok[q]){p=q;try{localStorage.setItem(KEY,JSON.stringify({p:p,t:Date.now()}));}catch(e){}}
+    else{try{var s=JSON.parse(localStorage.getItem(KEY)||"null");if(s&&ok[s.p]&&Date.now()-s.t<DAYS*864e5)p=s.p;}catch(e){}}
+  }catch(e){}
+  if(!p)return;
+  document.querySelectorAll('a[href^="https://buy.stripe.com/"]').forEach(function(a){
+    a.href=a.href.split("?")[0]+"?client_reference_id="+p;
+  });
+})();
+</script>
 </body>
 </html>
