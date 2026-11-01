@@ -74,6 +74,15 @@ section{padding-top:var(--gap)}
 .pick{display:inline-flex;align-items:center;gap:12px;font-weight:500;cursor:pointer;min-height:44px}
 .pick input{width:26px;height:26px;accent-color:var(--ink);cursor:pointer}
 
+/* ndis */
+.ndis{margin-top:var(--gap);padding-top:clamp(40px,5vw,80px);padding-bottom:clamp(40px,5vw,80px);background:var(--surface)}
+.ndis-in{display:grid;grid-template-columns:5fr 7fr;gap:var(--m);align-items:center}
+.ndis h2{margin-bottom:24px}
+.ndis>.btn{margin-top:48px}
+.facts{display:grid;gap:28px}
+.facts .num{font:800 clamp(2.4rem,1.4rem + 4.4vw,5.6rem)/.95 Unbounded,sans-serif;letter-spacing:-.05em}
+.facts .cap{font-size:var(--step-lead);margin-top:6px}
+
 /* work */
 .work{margin-top:var(--gap);padding-top:var(--gap);padding-bottom:var(--gap)}
 .work .head{display:grid;grid-template-columns:5fr 7fr;gap:var(--m);margin-bottom:56px;align-items:end}
@@ -121,12 +130,12 @@ footer{padding:var(--gap) var(--m) 28px}
   .mono{will-change:auto}
 }
 @media (max-width:820px){
-  .two,.work .head{grid-template-columns:1fr}
+  .two,.work .head,.ndis-in{grid-template-columns:1fr}
   .rows div{grid-template-columns:1fr 2fr}
   .two>div:first-child{position:static}
   .shots{grid-template-columns:1fr}
   .cols{grid-template-columns:1fr 1fr}
-  .top nav a:not(:last-child){display:none}
+  .top nav a:not(:last-child):not([href="ndis/"]){display:none}
   .hero{min-height:calc(100svh - 58px)}
   .mono{position:relative;left:auto;right:auto;bottom:auto;margin-top:auto;font-size:38vw}
 }
@@ -141,7 +150,7 @@ footer{padding:var(--gap) var(--m) 28px}
 <div class="hero" id="top">
   <header class="top">
     <a class="w" href="#top">JAB Enterprise</a>
-    <nav aria-label="Main"><a href="#services">What we do</a><a href="#work">Our work</a><a href="#contact">Call Jay</a></nav>
+    <nav aria-label="Main"><a href="#services">What we do</a><a href="ndis/">NDIS kits</a><a href="#work">Our work</a><a href="#contact">Call Jay</a></nav>
   </header>
   <div class="hero-copy">
     <p class="reveal">Jay and Archer Boyle, Doreen. Phone-first websites for local trades: $750, yours to keep, no monthly fee.</p>
@@ -192,6 +201,21 @@ footer{padding:var(--gap) var(--m) 28px}
   </div>
 </section>
 
+<section class="ndis pad" id="ndis">
+  <div class="ndis-in">
+    <div>
+      <h2 class="reveal">NDIS compliance kits</h2>
+      <p class="lead reveal" style="--i:1">Editable Word templates written to the NDIS Practice Standards, updated for the SIL rules after 1 October 2026. Fill in your details, match them to how you work, and walk into your audit prepared.</p>
+    </div>
+    <div class="facts">
+      <div class="reveal"><p class="num">36</p><p class="cap">editable Word documents</p></div>
+      <div class="reveal" style="--i:1"><p class="num">$247</p><p class="cap">for the starter kit, one off</p></div>
+      <div class="reveal" style="--i:2"><p class="num">Minutes</p><p class="cap">to your inbox after payment</p></div>
+    </div>
+  </div>
+  <a class="btn reveal" href="ndis/">See the NDIS kits</a>
+</section>
+
 <section class="dark work pad" id="work">
   <div class="head">
     <h2 class="reveal">Sites we&#x27;ve built</h2>
@@ -229,7 +253,7 @@ footer{padding:var(--gap) var(--m) 28px}
     <div><p>JAB Enterprise</p><p>Websites and missed-call answering for local business</p></div>
     <div><p>Doreen, Mernda, South Morang, Epping and nearby suburbs</p></div>
     <div><p><a href="tel:+61450220570">0450 220 570</a></p><p><a href="mailto:straightind@gmail.com">straightind@gmail.com</a></p></div>
-    <div><p><a href="https://www.facebook.com/groups/doreenbusiness">Doreen Business Group</a></p></div>
+    <div><p><a href="ndis/">NDIS compliance kits</a></p><p><a href="https://www.facebook.com/groups/doreenbusiness">Doreen Business Group</a></p></div>
   </div>
   <div class="big disp" aria-hidden="true">JAB Enterprise</div>
   <p class="copy">&copy; 2026 JAB Enterprise</p>
