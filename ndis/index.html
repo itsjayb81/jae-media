@@ -422,7 +422,7 @@
 <script>
 /* Partner tracking: jabenterprise.com/ndis/?p=jess tags every Buy button so the sale is credited. */
 (function(){
-  var ok={jay:1,jess:1,bianca:1},KEY="jab_partner",DAYS=30,p="";
+  var ok={jay:1,jess:1,bianca:1,sarah:1,cory:1},KEY="jab_partner",DAYS=30,p="";
   try{
     var q=(new URLSearchParams(location.search).get("p")||"").toLowerCase().replace(/[^a-z0-9_-]/g,"");
     if(ok[q]){p=q;try{localStorage.setItem(KEY,JSON.stringify({p:p,t:Date.now()}));}catch(e){}}
