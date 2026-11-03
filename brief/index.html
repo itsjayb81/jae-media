@@ -81,6 +81,15 @@ button.go[disabled]{opacity:.55;cursor:wait}
 .done h2{font-family:Unbounded;font-weight:800;font-size:clamp(26px,5vw,48px);text-transform:uppercase;line-height:1.05}
 .done ol{margin:24px 0 0 22px;font-size:1.15rem;line-height:1.7}
 .done a.mail{display:inline-block;margin-top:24px;background:var(--brass);color:var(--ink);padding:18px 26px;font-weight:700;text-decoration:none}
+.terms{background:#f4f4ef;border:2px solid var(--ink);padding:clamp(18px,3vw,28px);margin:6px 0 20px}
+.terms ol{margin:10px 0 0 22px;line-height:1.6}
+.terms li{margin-bottom:12px}
+.terms li small{display:block;color:var(--muted);font-size:.95rem}
+.terms .why{margin:6px 0 0 0;padding-left:20px}
+.terms .why li{margin-bottom:4px;font-size:.98rem}
+.agree{display:flex;gap:14px;align-items:flex-start;margin-top:20px;padding:16px;background:var(--brass);border:2px solid var(--ink);cursor:pointer;font-weight:700}
+.agree input{width:26px;height:26px;flex:none;margin-top:2px;accent-color:#181715}
+.agree.bad{outline:4px solid #a1221a}
 .hp{position:absolute;left:-9999px;opacity:0}
 footer{background:var(--ink);color:#cfcfc8;padding:28px 0;font-size:.9rem}
 @media (max-width:640px){.two{grid-template-columns:1fr}.hint{margin-left:0}}
@@ -99,6 +108,30 @@ footer{background:var(--ink);color:#cfcfc8;padding:28px 0;font-size:.9rem}
 <main class="wrap">
 <form id="f" novalidate>
   <input class="hp" type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <fieldset>
+    <div class="step"><i>!</i><h2>Before you start</h2></div>
+    <p class="hint">How it works, so there are no surprises. Please read it.</p>
+    <div class="terms" id="terms">
+      <ol>
+        <li><b>You buy your own web address.</b> In your name, with your ABN, on your card.
+          <small>We never buy it for you, and here is why:</small>
+          <ul class="why">
+            <li>It is yours. Nobody else can hold it, sell it or take it away.</li>
+            <li>You stay in control. You can move it anywhere, any time.</li>
+            <li>The renewal reminders and receipts come straight to you, so it never lapses by accident.</li>
+            <li>It is a business cost. Ask your accountant about claiming it.</li>
+            <li>For a .com.au, Australian rules say the business itself must hold it.</li>
+          </ul></li>
+        <li><b>We host your website, free.</b> There is no hosting fee. You get a full copy of your site files when it goes live, and if you ever want your site hosted somewhere else, we move it for you.</li>
+        <li><b>Your website is $750, once.</b> No monthly fee for the website. Your web address renewal (about $10 to $25 a year) goes to the company you bought it from.</li>
+        <li><b>Changes after your site is live: $49 per change session.</b> We have a quick chat, then email you a recap of what we will change. Once you approve the recap, we make the change and send you an invoice.</li>
+        <li><b>Going live.</b> You approve your site in writing. After you have paid, we point your web address at it. Until then, you only see a private draft link.</li>
+        <li><b>Your details.</b> What you tell us here is used to build your website. We do not share it.</li>
+      </ol>
+      <label class="agree" id="agreeBox"><input type="checkbox" id="agree" name="agree" value="yes"><span>I have read this. I agree, and I will buy my web address myself, in my own name.</span></label>
+    </div>
+  </fieldset>
 
   <fieldset>
     <div class="step"><i>1</i><h2>About you</h2></div>
@@ -243,6 +276,7 @@ footer{background:var(--ink);color:#cfcfc8;padding:28px 0;font-size:.9rem}
     <li>Email your <b>logo</b> and your <b>10 best photos</b> to <b>sales@jabenterprise.com</b>.</li>
     <li>Put your business name in the subject line.</li>
     <li>We build a first draft and send you a private link to look at.</li>
+    <li>While you wait, <a href="/domain/">get your web address</a>. It takes 10 minutes and it stays yours.</li>
   </ol>
   <a class="mail" id="mailto" href="mailto:sales@jabenterprise.com?subject=Logo%20and%20photos">Open email with the subject ready</a>
 </section>
@@ -256,6 +290,7 @@ footer{background:var(--ink);color:#cfcfc8;padding:28px 0;font-size:.9rem}
   var BRIEF_URL = 'https://script.google.com/macros/s/AKfycbzQTUTW2QL402z4LlmcYqycILs2jO5QvqGYckM3DT8wloSZ6DZj0d3I67IiQLxaUfSO-Q/exec';
   var form=document.getElementById('f'),msg=document.getElementById('msg'),go=document.getElementById('go');
   var sws=document.getElementById('sws');
+  document.getElementById('agree').addEventListener('change',function(){document.getElementById('agreeBox').className='agree'});
   sws.addEventListener('change',function(e){
     var on=sws.querySelectorAll('input:checked');
     if(on.length>3){e.target.checked=false;msg.className='msg err';msg.textContent='Three colours is plenty. Untick one to swap.';setTimeout(function(){msg.textContent=''},2600)}
@@ -275,6 +310,8 @@ footer{background:var(--ink);color:#cfcfc8;padding:28px 0;font-size:.9rem}
     msg.className='msg';msg.textContent='';
     var d=collect();
     if(d.hp)return;
+    if(!d.agree){var ab=document.getElementById('agreeBox');ab.className='agree bad';msg.className='msg err';msg.textContent='Please tick the box at the top to agree before we send your brief.';document.getElementById('terms').scrollIntoView({behavior:'smooth',block:'center'});return}
+    d.termsVersion='v1 2026-11-03';
     if(!d.business||!d.name||!d.phone||!d.email){msg.className='msg err';msg.textContent='We need your business name, your name, phone and email (step 1).';document.getElementById('biz').focus();return}
     if(!BRIEF_URL){
       var lines=Object.keys(d).filter(function(k){return k!=='hp'&&d[k]}).map(function(k){return k+': '+d[k]});

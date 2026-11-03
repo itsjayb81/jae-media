@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your Web Address | JAB Enterprise</title>
+<meta name="description" content="How to buy and hand over your web address in 10 minutes.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800&family=Onest:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#e8e8e3;--surface:#dcdcd6;--ink:#181715;--muted:#4d4c47;--brass:#d6c21c;--line:rgba(24,23,21,.28);--m:clamp(16px,5vw,64px)}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.55 Onest,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:860px;margin:0 auto;padding:0 var(--m)}
+header{background:var(--ink);color:var(--bg);padding:clamp(36px,6vw,80px) 0 clamp(36px,6vw,72px)}
+.kick{font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:500}
+h1{font-family:Unbounded,sans-serif;font-weight:800;font-size:clamp(30px,6.4vw,64px);line-height:1.05;letter-spacing:-.02em;text-transform:uppercase;margin-top:18px}
+h1 em{font-style:normal;color:var(--brass)}
+.lead{font-size:1.2rem;max-width:34em;margin-top:20px;color:#d4d4cd}
+.promise{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:26px;font-size:.95rem;color:#d4d4cd}
+.promise b{color:var(--brass);font-weight:700}
+form{padding-bottom:60px}
+fieldset{border:0;padding:clamp(40px,6vw,72px) 0 8px;border-top:1px solid var(--line)}
+fieldset:first-of-type{border-top:0}
+legend{display:contents}
+.step{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.step i{font-style:normal;font-family:Unbounded;font-weight:800;font-size:.85rem;background:var(--ink);color:var(--brass);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex:none;position:relative;top:-3px}
+.step h2{font-family:Unbounded;font-weight:800;font-size:clamp(20px,3.4vw,30px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.1}
+.hint{color:var(--muted);margin:0 0 22px 48px;font-size:.98rem}
+.f{display:grid;gap:8px;margin-bottom:24px}
+.f>label,.f>.q{font-weight:700}
+.f small{color:var(--muted);font-weight:400;display:block;font-size:.9rem}
+input[type=text],input[type=email],input[type=tel],input[type=url],textarea,select{width:100%;font:inherit;background:#f4f4ef;border:2px solid var(--ink);border-radius:0;padding:14px 14px;color:var(--ink)}
+textarea{min-height:130px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:3px solid var(--brass);outline-offset:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.opt span{display:block;padding:12px 18px;border:2px solid var(--ink);background:#f4f4ef;font-weight:500;pointer-events:none}
+.opt input:checked+span{background:var(--ink);color:var(--brass)}
+.opt input:focus-visible+span{outline:3px solid var(--brass);outline-offset:2px}
+.looks{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+@media (max-width:700px){.looks{grid-template-columns:repeat(2,1fr)}}
+.look{position:relative}
+.look input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0;z-index:2}
+.card{border:2px solid var(--ink);background:#f4f4ef;display:block;pointer-events:none}
+.card .pv{height:118px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.card .pv b{font-size:1.5rem;line-height:.95}
+.card .pv u{text-decoration:none;font-size:.7rem;letter-spacing:.06em;padding:5px 9px;align-self:flex-start}
+.card em{display:block;font-style:normal;padding:9px 12px;font-weight:700;font-size:.95rem;border-top:2px solid var(--ink)}
+.card em small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.look input:checked+.card{outline:4px solid var(--brass);outline-offset:3px;background:var(--ink)}
+.look input:checked+.card em{color:var(--brass)}
+.look input:checked+.card em small{color:#cfcfc8}
+.look input:focus-visible+.card{outline:4px solid var(--brass);outline-offset:3px}
+.pv.bold{background:#c62820;color:#fff7f2}.pv.bold b{font-family:Impact,"Arial Narrow",sans-serif;text-transform:uppercase;font-size:1.9rem}.pv.bold u{background:#fff;color:#c62820}
+.pv.clean{background:#fff;color:#181715}.pv.clean b{font-weight:500;letter-spacing:-.03em;font-size:1.7rem}.pv.clean u{background:#181715;color:#fff}
+.pv.warm{background:#f3e6d3;color:#4a2c17}.pv.warm b{font-family:Georgia,serif;font-weight:400;font-style:italic;font-size:1.7rem}.pv.warm u{background:#b5532b;color:#fff}
+.pv.dark{background:#111;color:#f1f1ee}.pv.dark b{font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:1.3rem}.pv.dark u{background:#37e6c4;color:#111}
+.pv.fun{background:#ffd93d;color:#18181b}.pv.fun b{font-family:"Trebuchet MS",sans-serif;font-weight:900;font-size:1.8rem;transform:rotate(-3deg);display:block}.pv.fun u{background:#ff5d8f;color:#fff;border-radius:99px}
+.swatches{display:flex;flex-wrap:wrap;gap:10px}
+.sw{position:relative}
+.sw input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.sw span{display:block;width:54px;height:54px;border:2px solid var(--ink);pointer-events:none}
+.sw input:checked+span{outline:4px solid var(--brass);outline-offset:2px}
+.sw input:focus-visible+span{outline:4px solid var(--brass);outline-offset:2px}
+.sw .lab{font-size:.72rem;display:block;text-align:center;margin-top:4px;width:54px;color:var(--muted)}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:28px}
+button.go{font:inherit;font-family:Unbounded;font-weight:800;text-transform:uppercase;font-size:1rem;letter-spacing:.02em;background:var(--ink);color:var(--brass);border:0;padding:20px 30px;cursor:pointer}
+button.go:hover{background:#000}
+button.go[disabled]{opacity:.55;cursor:wait}
+.msg{margin-top:16px;font-weight:700}
+.msg.err{color:#a1221a}
+.done{display:none;padding:clamp(40px,7vw,90px) 0}
+.done.on{display:block}
+.done h2{font-family:Unbounded;font-weight:800;font-size:clamp(26px,5vw,48px);text-transform:uppercase;line-height:1.05}
+.done ol{margin:24px 0 0 22px;font-size:1.15rem;line-height:1.7}
+.done a.mail{display:inline-block;margin-top:24px;background:var(--brass);color:var(--ink);padding:18px 26px;font-weight:700;text-decoration:none}
+.hp{position:absolute;left:-9999px;opacity:0}
+footer{background:var(--ink);color:#cfcfc8;padding:28px 0;font-size:.9rem}
+@media (max-width:640px){.two{grid-template-columns:1fr}.hint{margin-left:0}}
+</style>
+<style>
+.box{background:#f4f4ef;border:2px solid var(--ink);padding:20px 22px;margin:18px 0}
+.box h3{font-family:Unbounded;font-weight:800;font-size:1rem;text-transform:uppercase;margin-bottom:8px}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:1rem}
+th,td{text-align:left;padding:10px 12px;border:2px solid var(--ink);background:#f4f4ef;word-break:break-all}
+th{background:var(--ink);color:var(--brass);font-weight:700}
+ul.no{margin:8px 0 0 22px}
+.step{margin-top:6px}
+section.s{padding:clamp(34px,5vw,60px) 0 6px;border-top:1px solid var(--line)}
+section.s:first-of-type{border-top:0}
+.hint{margin-left:48px}
+p.t{margin:0 0 12px 48px}
+@media (max-width:640px){p.t{margin-left:0}}
+a.mail{display:inline-block;margin-top:20px;background:var(--brass);color:var(--ink);padding:18px 26px;font-weight:700;text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kick">JAB Enterprise</div>
+    <h1>Your web address, <em>in 10 minutes.</em></h1>
+    <p class="lead">You buy it, in your name. It is yours for good. We point it at your site when you are ready to go live.</p>
+    <div class="promise"><span><b>1</b> Pick a name</span><span><b>2</b> Buy it</span><span><b>3</b> Send it to us</span></div>
+  </div>
+</header>
+<main class="wrap" style="padding-bottom:70px">
+
+<section class="s">
+  <div class="step"><i>1</i><h2>Pick your name</h2></div>
+  <p class="t">Short and easy to say. Your business name is best, like <b>yourbusiness.com.au</b>.</p>
+  <div class="box"><h3>Have ready</h3>You need your <b>ABN</b>. A .com.au address must be in the business owner's own name and ABN. That is the law, and it also means nobody else can take it from you.</div>
+</section>
+
+<section class="s">
+  <div class="step"><i>2</i><h2>Buy it</h2></div>
+  <p class="t">We suggest <b>VentraIP</b> (an Australian company). GoDaddy is fine too. Use your own card and your own details.</p>
+  <div class="box"><h3>What it should cost</h3>About <b>$10 the first year</b> and about <b>$23 a year</b> after at VentraIP. Prices change, so check the total at checkout. If you are paying more than about $30, you have picked up extras.</div>
+  <div class="box"><h3>Say NO to these at checkout</h3>
+    <ul class="no"><li>Web hosting. We host your site for you.</li><li>Email hosting, for now.</li><li>Privacy or WHOIS protection. .au already hides your details.</li><li>SSL certificate. Your site gets one free.</li><li>Website builder.</li></ul></div>
+  <p class="t">Use <b>your</b> email address on the account, so renewal reminders come to you.</p>
+</section>
+
+<section class="s">
+  <div class="step"><i>3</i><h2>Tell us it is bought</h2></div>
+  <p class="t">Email us the address you bought. That is all for now. <b>Do not change anything in your DNS yet.</b> We will tell you when to, once your site is approved.</p>
+  <a class="mail" href="mailto:sales@jabenterprise.com?subject=I%20bought%20my%20web%20address&body=My%20business%3A%0AMy%20web%20address%3A%0AWhere%20I%20bought%20it%20(VentraIP%2C%20GoDaddy%2C%20other)%3A">Open an email to us</a>
+</section>
+
+<section class="s">
+  <div class="step"><i>4</i><h2>Later: one more thing</h2></div>
+  <p class="t">When your site is approved and paid, we ask you to do <b>one</b> of these. We will send you the one that suits you.</p>
+  <div class="box"><h3>Option A: add us as a helper (GoDaddy)</h3>In your GoDaddy account, invite us under <b>Delegate Access</b>, with <b>Domains Only</b> access. We never see your password and we can only touch your domain. You can remove us at any time.</div>
+  <div class="box"><h3>Option B: paste these records</h3>
+    In your domain's <b>DNS</b> settings, add these five records. Delete any "parked" or "coming soon" record first.
+    <table><tr><th>Type</th><th>Name</th><th>Value</th></tr>
+      <tr><td>A</td><td>@</td><td>185.199.108.153</td></tr>
+      <tr><td>A</td><td>@</td><td>185.199.109.153</td></tr>
+      <tr><td>A</td><td>@</td><td>185.199.110.153</td></tr>
+      <tr><td>A</td><td>@</td><td>185.199.111.153</td></tr>
+      <tr><td>CNAME</td><td>www</td><td>itsjayb81.github.io</td></tr></table>
+    It can take 10 minutes to a few hours to start working. That is normal.</div>
+</section>
+
+<section class="s">
+  <div class="step"><i>5</i><h2>Good to know</h2></div>
+  <p class="t">The address is yours and the renewal comes to you each year. The site is hosted by us, free, and you keep a full copy of your site files at handover. If you ever want to move it, we move it. Changes after launch are $49 per change session: a quick chat, a written recap, and once you approve it we make the change.</p>
+</section>
+</main>
+<footer><div class="wrap">JAB Enterprise. Stuck? Ring Jay on 0450 220 570 or email sales@jabenterprise.com</div></footer>
+</body>
+</html>
