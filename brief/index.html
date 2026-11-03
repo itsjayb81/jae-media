@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your Website Brief | JAB Enterprise</title>
+<meta name="description" content="Ten minutes, mostly taps. Tell JAB Enterprise how your website should look, sound and work, and we build it right the first time.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800&family=Onest:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#e8e8e3;--surface:#dcdcd6;--ink:#181715;--muted:#4d4c47;--brass:#d6c21c;--line:rgba(24,23,21,.28);--m:clamp(16px,5vw,64px)}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.55 Onest,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:860px;margin:0 auto;padding:0 var(--m)}
+header{background:var(--ink);color:var(--bg);padding:clamp(36px,6vw,80px) 0 clamp(36px,6vw,72px)}
+.kick{font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:500}
+h1{font-family:Unbounded,sans-serif;font-weight:800;font-size:clamp(30px,6.4vw,64px);line-height:1.05;letter-spacing:-.02em;text-transform:uppercase;margin-top:18px}
+h1 em{font-style:normal;color:var(--brass)}
+.lead{font-size:1.2rem;max-width:34em;margin-top:20px;color:#d4d4cd}
+.promise{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:26px;font-size:.95rem;color:#d4d4cd}
+.promise b{color:var(--brass);font-weight:700}
+form{padding-bottom:60px}
+fieldset{border:0;padding:clamp(40px,6vw,72px) 0 8px;border-top:1px solid var(--line)}
+fieldset:first-of-type{border-top:0}
+legend{display:contents}
+.step{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.step i{font-style:normal;font-family:Unbounded;font-weight:800;font-size:.85rem;background:var(--ink);color:var(--brass);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex:none;position:relative;top:-3px}
+.step h2{font-family:Unbounded;font-weight:800;font-size:clamp(20px,3.4vw,30px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.1}
+.hint{color:var(--muted);margin:0 0 22px 48px;font-size:.98rem}
+.f{display:grid;gap:8px;margin-bottom:24px}
+.f>label,.f>.q{font-weight:700}
+.f small{color:var(--muted);font-weight:400;display:block;font-size:.9rem}
+input[type=text],input[type=email],input[type=tel],input[type=url],textarea,select{width:100%;font:inherit;background:#f4f4ef;border:2px solid var(--ink);border-radius:0;padding:14px 14px;color:var(--ink)}
+textarea{min-height:130px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:3px solid var(--brass);outline-offset:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.opt span{display:block;padding:12px 18px;border:2px solid var(--ink);background:#f4f4ef;font-weight:500;pointer-events:none}
+.opt input:checked+span{background:var(--ink);color:var(--brass)}
+.opt input:focus-visible+span{outline:3px solid var(--brass);outline-offset:2px}
+.looks{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+@media (max-width:700px){.looks{grid-template-columns:repeat(2,1fr)}}
+.look{position:relative}
+.look input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0;z-index:2}
+.card{border:2px solid var(--ink);background:#f4f4ef;display:block;pointer-events:none}
+.card .pv{height:118px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.card .pv b{font-size:1.5rem;line-height:.95}
+.card .pv u{text-decoration:none;font-size:.7rem;letter-spacing:.06em;padding:5px 9px;align-self:flex-start}
+.card em{display:block;font-style:normal;padding:9px 12px;font-weight:700;font-size:.95rem;border-top:2px solid var(--ink)}
+.card em small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.look input:checked+.card{outline:4px solid var(--brass);outline-offset:3px;background:var(--ink)}
+.look input:checked+.card em{color:var(--brass)}
+.look input:checked+.card em small{color:#cfcfc8}
+.look input:focus-visible+.card{outline:4px solid var(--brass);outline-offset:3px}
+.pv.bold{background:#c62820;color:#fff7f2}.pv.bold b{font-family:Impact,"Arial Narrow",sans-serif;text-transform:uppercase;font-size:1.9rem}.pv.bold u{background:#fff;color:#c62820}
+.pv.clean{background:#fff;color:#181715}.pv.clean b{font-weight:500;letter-spacing:-.03em;font-size:1.7rem}.pv.clean u{background:#181715;color:#fff}
+.pv.warm{background:#f3e6d3;color:#4a2c17}.pv.warm b{font-family:Georgia,serif;font-weight:400;font-style:italic;font-size:1.7rem}.pv.warm u{background:#b5532b;color:#fff}
+.pv.dark{background:#111;color:#f1f1ee}.pv.dark b{font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:1.3rem}.pv.dark u{background:#37e6c4;color:#111}
+.pv.fun{background:#ffd93d;color:#18181b}.pv.fun b{font-family:"Trebuchet MS",sans-serif;font-weight:900;font-size:1.8rem;transform:rotate(-3deg);display:block}.pv.fun u{background:#ff5d8f;color:#fff;border-radius:99px}
+.swatches{display:flex;flex-wrap:wrap;gap:10px}
+.sw{position:relative}
+.sw input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.sw span{display:block;width:54px;height:54px;border:2px solid var(--ink);pointer-events:none}
+.sw input:checked+span{outline:4px solid var(--brass);outline-offset:2px}
+.sw input:focus-visible+span{outline:4px solid var(--brass);outline-offset:2px}
+.sw .lab{font-size:.72rem;display:block;text-align:center;margin-top:4px;width:54px;color:var(--muted)}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:28px}
+button.go{font:inherit;font-family:Unbounded;font-weight:800;text-transform:uppercase;font-size:1rem;letter-spacing:.02em;background:var(--ink);color:var(--brass);border:0;padding:20px 30px;cursor:pointer}
+button.go:hover{background:#000}
+button.go[disabled]{opacity:.55;cursor:wait}
+.msg{margin-top:16px;font-weight:700}
+.msg.err{color:#a1221a}
+.done{display:none;padding:clamp(40px,7vw,90px) 0}
+.done.on{display:block}
+.done h2{font-family:Unbounded;font-weight:800;font-size:clamp(26px,5vw,48px);text-transform:uppercase;line-height:1.05}
+.done ol{margin:24px 0 0 22px;font-size:1.15rem;line-height:1.7}
+.done a.mail{display:inline-block;margin-top:24px;background:var(--brass);color:var(--ink);padding:18px 26px;font-weight:700;text-decoration:none}
+.hp{position:absolute;left:-9999px;opacity:0}
+footer{background:var(--ink);color:#cfcfc8;padding:28px 0;font-size:.9rem}
+@media (max-width:640px){.two{grid-template-columns:1fr}.hint{margin-left:0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kick">JAB Enterprise</div>
+    <h1>Your website, <em>your way.</em></h1>
+    <p class="lead">Ten minutes, mostly taps. Tell us how your site should look, sound and work, and we build it right the first time. No endless back and forth.</p>
+    <div class="promise"><span><b>1</b> Fill this in</span><span><b>2</b> Email us your logo and photos</span><span><b>3</b> We build, you approve</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+<form id="f" novalidate>
+  <input class="hp" type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <fieldset>
+    <div class="step"><i>1</i><h2>About you</h2></div>
+    <p class="hint">So we know who to call.</p>
+    <div class="two">
+      <div class="f"><label for="biz">Business name</label><input id="biz" name="business" type="text" required autocomplete="organization"></div>
+      <div class="f"><label for="nm">Your name</label><input id="nm" name="name" type="text" required autocomplete="name"></div>
+    </div>
+    <div class="two">
+      <div class="f"><label for="ph">Best phone number</label><input id="ph" name="phone" type="tel" required autocomplete="tel"></div>
+      <div class="f"><label for="em">Email</label><input id="em" name="email" type="email" required autocomplete="email"></div>
+    </div>
+    <div class="f"><label for="biztype">What kind of business is it?</label>
+      <select id="biztype" name="type">
+        <option value="">Pick one</option><option>Food truck or mobile food</option><option>Cafe or restaurant</option><option>Trade or home service</option><option>Cleaning</option><option>Beauty or wellness</option><option>Retail</option><option>Other</option>
+      </select></div>
+  </fieldset>
+
+  <fieldset>
+    <div class="step"><i>2</i><h2>What you do</h2></div>
+    <p class="hint">The words on your site come from here.</p>
+    <div class="f"><label for="one">In one sentence, what do you do?<small>Like you would say it to a new customer.</small></label><input id="one" name="oneLine" type="text"></div>
+    <div class="f"><label for="svc">Your services or menu<small>List them, one per line. Add prices only if you want prices shown.</small></label><textarea id="svc" name="services"></textarea></div>
+    <div class="f"><div class="q">Show prices on the site?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="prices" value="Yes"><span>Yes</span></label>
+        <label class="opt"><input type="radio" name="prices" value="No, ask for a quote"><span>No, ask for a quote</span></label>
+        <label class="opt"><input type="radio" name="prices" value="Some of them"><span>Some of them</span></label>
+      </div></div>
+    <div class="f"><label for="bio">Your story<small>Two or three sentences: who you are, how long, why customers pick you. Or write "write it for me" and we draft it from your answers.</small></label><textarea id="bio" name="bio"></textarea></div>
+    <div class="f"><label for="best">What are you best known for?<small>The one or two things people always come back for.</small></label><input id="best" name="knownFor" type="text"></div>
+  </fieldset>
+
+  <fieldset>
+    <div class="step"><i>3</i><h2>How it should look</h2></div>
+    <p class="hint">Point at what feels like you. Tap one.</p>
+    <div class="f">
+      <div class="looks" role="radiogroup" aria-label="Look">
+        <label class="look"><input type="radio" name="look" value="Bold and loud"><span class="card"><span class="pv bold"><b>Big and bold</b><u>BOOK NOW</u></span><em>Bold and loud<small>Big type, strong colour</small></em></span></label>
+        <label class="look"><input type="radio" name="look" value="Clean and simple"><span class="card"><span class="pv clean"><b>Clean and simple</b><u>Contact</u></span><em>Clean and simple<small>White space, calm</small></em></span></label>
+        <label class="look"><input type="radio" name="look" value="Warm and friendly"><span class="card"><span class="pv warm"><b>Warm and friendly</b><u>Say hello</u></span><em>Warm and friendly<small>Soft, personal</small></em></span></label>
+        <label class="look"><input type="radio" name="look" value="Dark and sharp"><span class="card"><span class="pv dark"><b>Dark and sharp</b><u>ENQUIRE</u></span><em>Dark and sharp<small>Night feel, modern</small></em></span></label>
+        <label class="look"><input type="radio" name="look" value="Fun and playful"><span class="card"><span class="pv fun"><b>Fun!</b><u>Let's go</u></span><em>Fun and playful<small>Bright, cheeky</small></em></span></label>
+      </div>
+    </div>
+    <div class="f"><div class="q">Colours<small>Tap up to three. Or pick "from my logo" and we match it.</small></div>
+      <div class="swatches" id="sws">
+        <label class="sw"><input type="checkbox" name="colours" value="Red"><span style="background:#c62820"></span><i class="lab">Red</i></label>
+        <label class="sw"><input type="checkbox" name="colours" value="Orange"><span style="background:#e8761c"></span><i class="lab">Orange</i></label>
+        <label class="sw"><input type="checkbox" name="colours" value="Yellow"><span style="background:#e8c81c"></span><i class="lab">Yellow</i></label>
+        <label class="sw"><input type="checkbox" name="colours" value="Green"><span style="background:#2f8f4e"></span><i class="lab">Green</i></label>
+        <label class="sw"><input type="checkbox" name="colours" value="Teal"><span style="background:#1c9aa0"></span><i class="lab">Teal</i></label>
+        <label class="sw"><input type="checkbox" name="colours" value="Blue"><span style="background:#1f4fb4"></span><i class="lab">Blue</i></label>
+        <label class="sw"><input type="checkbox" name="colours" value="Purple"><span style="background:#6a2fa0"></span><i class="lab">Purple</i></label>
+        <label class="sw"><input type="checkbox" name="colours" value="Pink"><span style="background:#e0558f"></span><i class="lab">Pink</i></label>
+        <label class="sw"><input type="checkbox" name="colours" value="Black"><span style="background:#141414"></span><i class="lab">Black</i></label>
+        <label class="sw"><input type="checkbox" name="colours" value="White"><span style="background:#fff"></span><i class="lab">White</i></label>
+        <label class="sw"><input type="checkbox" name="colours" value="From my logo"><span style="background:linear-gradient(135deg,#c62820 0 33%,#e8c81c 33% 66%,#1f4fb4 66%)"></span><i class="lab">My logo</i></label>
+      </div></div>
+    <div class="f"><label for="like">A website you like<small>Any site, any business. Paste the link and tell us what you like about it.</small></label><input id="like" name="likeSite" type="url" placeholder="https://"></div>
+    <div class="f"><label for="liketxt">What do you like about it?</label><input id="liketxt" name="likeWhy" type="text"></div>
+    <div class="f"><label for="dislike">Anything you hate on a website?</label><input id="dislike" name="dislike" type="text"></div>
+    <div class="f"><div class="q">Do you have a logo?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="logo" value="Yes, I will email it"><span>Yes, I will email it</span></label>
+        <label class="opt"><input type="radio" name="logo" value="Only a small or blurry one"><span>Only a small or blurry one</span></label>
+        <label class="opt"><input type="radio" name="logo" value="No logo yet"><span>No logo yet</span></label>
+      </div></div>
+  </fieldset>
+
+  <fieldset>
+    <div class="step"><i>4</i><h2>What visitors can do</h2></div>
+    <p class="hint">Buttons turn visitors into customers. Tick what you want.</p>
+    <div class="f"><div class="q">Buttons on your site</div>
+      <div class="opts">
+        <label class="opt"><input type="checkbox" name="buttons" value="Call"><span>Call</span></label>
+        <label class="opt"><input type="checkbox" name="buttons" value="Text"><span>Text</span></label>
+        <label class="opt"><input type="checkbox" name="buttons" value="Email"><span>Email</span></label>
+        <label class="opt"><input type="checkbox" name="buttons" value="WhatsApp"><span>WhatsApp</span></label>
+        <label class="opt"><input type="checkbox" name="buttons" value="Enquiry form"><span>Enquiry form</span></label>
+        <label class="opt"><input type="checkbox" name="buttons" value="Google review"><span>Leave a Google review</span></label>
+        <label class="opt"><input type="checkbox" name="buttons" value="Directions"><span>Get directions</span></label>
+      </div></div>
+    <div class="f"><div class="q">Do you want bookings?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="booking" value="No bookings"><span>No bookings</span></label>
+        <label class="opt"><input type="radio" name="booking" value="Enquiry form is enough"><span>Enquiry form is enough</span></label>
+        <label class="opt"><input type="radio" name="booking" value="Google Calendar booking"><span>Google Calendar booking</span></label>
+        <label class="opt"><input type="radio" name="booking" value="I use a booking site"><span>I use a booking site</span></label>
+      </div></div>
+    <div class="f"><label for="booklink">Booking link, if you have one<small>Your Google Calendar booking page, or the booking site you use.</small></label><input id="booklink" name="bookingLink" type="url" placeholder="https://"></div>
+    <div class="f"><div class="q">Your enquiry form should ask for<small>Tap what matters. Fewer questions means more enquiries.</small></div>
+      <div class="opts">
+        <label class="opt"><input type="checkbox" name="formAsks" value="Name and phone"><span>Name and phone</span></label>
+        <label class="opt"><input type="checkbox" name="formAsks" value="Date"><span>Date</span></label>
+        <label class="opt"><input type="checkbox" name="formAsks" value="Place or address"><span>Place or address</span></label>
+        <label class="opt"><input type="checkbox" name="formAsks" value="Number of guests"><span>Number of guests</span></label>
+        <label class="opt"><input type="checkbox" name="formAsks" value="What they need"><span>What they need</span></label>
+        <label class="opt"><input type="checkbox" name="formAsks" value="Budget"><span>Budget</span></label>
+      </div></div>
+  </fieldset>
+
+  <fieldset>
+    <div class="step"><i>5</i><h2>Where to find you</h2></div>
+    <p class="hint">Only share what you want public.</p>
+    <div class="two">
+      <div class="f"><label for="pubph">Phone to show</label><input id="pubph" name="publicPhone" type="tel"></div>
+      <div class="f"><label for="pubem">Email to show</label><input id="pubem" name="publicEmail" type="email"></div>
+    </div>
+    <div class="f"><label for="area">Where do you work?<small>Suburbs, regions, or "events across Melbourne". Add a street address only if customers visit you.</small></label><input id="area" name="area" type="text"></div>
+    <div class="f"><label for="hours">Hours or availability</label><input id="hours" name="hours" type="text" placeholder="Mon to Fri 8 to 5, or by booking"></div>
+    <div class="f"><label for="soc">Social links<small>Facebook, Instagram, TikTok, YouTube. Paste links or handles, one per line.</small></label><textarea id="soc" name="socials" style="min-height:96px"></textarea></div>
+    <div class="f"><label for="gbp">Your Google listing<small>Search your business on Google Maps, tap Share, paste the link. No listing yet? Write "none".</small></label><input id="gbp" name="googleListing" type="text"></div>
+  </fieldset>
+
+  <fieldset>
+    <div class="step"><i>6</i><h2>Web address</h2></div>
+    <div class="f"><div class="q">Do you own a web address already?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="domain" value="Yes"><span>Yes</span></label>
+        <label class="opt"><input type="radio" name="domain" value="No, find me one"><span>No, find me one</span></label>
+        <label class="opt"><input type="radio" name="domain" value="Not sure"><span>Not sure</span></label>
+      </div></div>
+    <div class="f"><label for="dom">The address, or three names you would like<small>Like yourname.com.au</small></label><input id="dom" name="domainText" type="text"></div>
+  </fieldset>
+
+  <fieldset>
+    <div class="step"><i>7</i><h2>Last bits</h2></div>
+    <div class="f"><label for="when">When do you need it live?<small>A busy season, an event, a date we should hit.</small></label><input id="when" name="deadline" type="text"></div>
+    <div class="f"><label for="never">Anything we must not say or show?</label><input id="never" name="mustNot" type="text"></div>
+    <div class="f"><label for="more">Anything else?</label><textarea id="more" name="notes" style="min-height:96px"></textarea></div>
+    <div class="btnrow">
+      <button class="go" id="go" type="submit">Send my brief</button>
+    </div>
+    <p class="msg" id="msg" role="status" aria-live="polite"></p>
+  </fieldset>
+</form>
+
+<section class="done" id="done" aria-live="polite">
+  <h2>Got it. Thank you.</h2>
+  <ol>
+    <li>Email your <b>logo</b> and your <b>10 best photos</b> to <b>sales@jabenterprise.com</b>.</li>
+    <li>Put your business name in the subject line.</li>
+    <li>We build a first draft and send you a private link to look at.</li>
+  </ol>
+  <a class="mail" id="mailto" href="mailto:sales@jabenterprise.com?subject=Logo%20and%20photos">Open email with the subject ready</a>
+</section>
+</main>
+
+<footer><div class="wrap">JAB Enterprise. Questions? Ring Jay on 0450 220 570 or email sales@jabenterprise.com</div></footer>
+
+<script>
+(function(){
+  // Paste the Apps Script web app URL here (see SETUP-STEPS.md). Left empty, the form falls back to an email.
+  var BRIEF_URL = 'https://script.google.com/macros/s/AKfycbzQTUTW2QL402z4LlmcYqycILs2jO5QvqGYckM3DT8wloSZ6DZj0d3I67IiQLxaUfSO-Q/exec';
+  var form=document.getElementById('f'),msg=document.getElementById('msg'),go=document.getElementById('go');
+  var sws=document.getElementById('sws');
+  sws.addEventListener('change',function(e){
+    var on=sws.querySelectorAll('input:checked');
+    if(on.length>3){e.target.checked=false;msg.className='msg err';msg.textContent='Three colours is plenty. Untick one to swap.';setTimeout(function(){msg.textContent=''},2600)}
+  });
+  function collect(){
+    var d={},fd=new FormData(form);
+    fd.forEach(function(v,k){ if(d[k]===undefined) d[k]=v; else d[k]=[].concat(d[k],v).join(', '); });
+    return d;
+  }
+  function show(biz){
+    var n=encodeURIComponent('Logo and photos: '+(biz||''));
+    document.getElementById('mailto').href='mailto:sales@jabenterprise.com?subject='+n;
+    form.style.display='none';document.getElementById('done').className='done on';window.scrollTo(0,0);
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    msg.className='msg';msg.textContent='';
+    var d=collect();
+    if(d.hp)return;
+    if(!d.business||!d.name||!d.phone||!d.email){msg.className='msg err';msg.textContent='We need your business name, your name, phone and email (step 1).';document.getElementById('biz').focus();return}
+    if(!BRIEF_URL){
+      var lines=Object.keys(d).filter(function(k){return k!=='hp'&&d[k]}).map(function(k){return k+': '+d[k]});
+      location.href='mailto:sales@jabenterprise.com?subject='+encodeURIComponent('Website brief: '+d.business)+'&body='+encodeURIComponent(lines.join('\n'));
+      show(d.business);return;
+    }
+    go.disabled=true;go.textContent='Sending';
+    fetch(BRIEF_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(d)})
+      .then(function(r){return r.json()})
+      .then(function(r){ if(r&&r.ok){show(d.business)} else throw 0 })
+      .catch(function(){go.disabled=false;go.textContent='Send my brief';msg.className='msg err';msg.textContent='That did not send. Please try again, or email sales@jabenterprise.com.'});
+  });
+})();
+</script>
+</body>
+</html>
