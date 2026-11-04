@@ -111,6 +111,10 @@ section{padding-top:var(--gap)}
 .rows dd{font:800 var(--step-head)/1.05 Unbounded,sans-serif;letter-spacing:-.04em;text-transform:none;word-break:break-word}
 .rows dd a{text-decoration:none}
 .contact .btn{margin-top:56px}
+.ref{display:none;margin-top:28px;font-size:var(--step-body);border-left:4px solid var(--accent);padding:6px 0 6px 16px}
+.ref.on{display:block}
+.btn.alt{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.contact .btn.alt{display:block;width:fit-content;margin-top:16px}
 
 /* footer */
 footer{padding:var(--gap) var(--m) 28px}
@@ -156,6 +160,7 @@ footer{padding:var(--gap) var(--m) 28px}
   <div class="hero-copy">
     <p class="reveal">Jay and Archer Boyle, Doreen. Phone-first websites for local trades: $750, yours to keep, no monthly fee.</p>
     <a class="btn reveal" style="--i:1" href="tel:+61450220570">Call 0450 220 570</a>
+    <p class="ref" data-ref></p>
   </div>
   <h1 class="mono disp" id="mono" aria-label="JAB Enterprise">JAB</h1>
   <p class="sr">JAB Enterprise: websites and missed-call answering for local business in Doreen.</p>
@@ -242,17 +247,18 @@ footer{padding:var(--gap) var(--m) 28px}
   <h2 class="reveal">Get a quote</h2>
   <dl class="rows">
     <div class="reveal"><dt>Phone</dt><dd><a href="tel:+61450220570">0450 220 570</a></dd></div>
-    <div class="reveal" style="--i:1"><dt>Area</dt><dd>Doreen and nearby suburbs</dd></div>
+    <div class="reveal" style="--i:1"><dt>Area</dt><dd>Based in Doreen. Websites for anywhere</dd></div>
     <div class="reveal" style="--i:2"><dt>Email</dt><dd><a href="mailto:sales@jabenterprise.com">sales@jabenterprise.com</a></dd></div>
   </dl>
-  <a class="btn" href="tel:+61450220570">Call 0450 220 570</a>
+  <p class="ref" data-ref></p>
+  <a class="btn" href="tel:+61450220570">Call 0450 220 570</a><a class="btn alt" data-sms href="sms:+61450220570">Text Jay</a>
 </section>
 </main>
 
 <footer>
   <div class="cols">
     <div><p>JAB Enterprise</p><p>Websites and missed-call answering for local business</p></div>
-    <div><p>Doreen, Mernda, South Morang, Epping and nearby suburbs</p></div>
+    <div><p>Based in Doreen, Victoria. Websites for businesses anywhere</p></div>
     <div><p><a href="tel:+61450220570">0450 220 570</a></p><p><a href="mailto:sales@jabenterprise.com">sales@jabenterprise.com</a></p></div>
     <div><p><a href="ndis/">NDIS compliance kits</a></p><p><a href="https://www.facebook.com/groups/doreenbusiness">Doreen Business Group</a></p></div>
   </div>
@@ -299,6 +305,26 @@ footer{padding:var(--gap) var(--m) 28px}
   }
   boxes.forEach(function(b){b.addEventListener("change",calc);});
   calc();
+})();
+</script>
+<script>
+/* Referral links: jabenterprise.com/?p=jess shows "Jess sent you" and puts her name
+   in the text and email to Jay, so the $100 referral is credited. Kept 30 days. */
+(function(){
+  var who={jess:"Jess",sharmila:"Sharmila",bianca:"Bianca",sunita:"Sunita",jay:"",doreen:"",sea:""};
+  var KEY="jab_ref",DAYS=30,p="";
+  try{
+    var q=(new URLSearchParams(location.search).get("p")||"").toLowerCase().replace(/[^a-z0-9_-]/g,"");
+    if(q in who){p=q;try{localStorage.setItem(KEY,JSON.stringify({p:p,t:Date.now()}));}catch(e){}}
+    else{var v=JSON.parse(localStorage.getItem(KEY)||"null");if(v&&(v.p in who)&&Date.now()-v.t<DAYS*864e5)p=v.p;}
+  }catch(e){}
+  var name=p?who[p]:"",tag=name||(p==="doreen"?"the Doreen group":p==="sea"?"SEA":"");
+  var body="Hi Jay, I'd like a quote for a website."+(tag?" I found you through "+tag+".":"");
+  [].forEach.call(document.querySelectorAll("[data-sms]"),function(a){a.href="sms:+61450220570?&body="+encodeURIComponent(body);});
+  [].forEach.call(document.querySelectorAll('a[href^="mailto:"]'),function(a){
+    a.href="mailto:sales@jabenterprise.com?subject="+encodeURIComponent("Website quote"+(tag?" ("+tag+")":""))+"&body="+encodeURIComponent(body);});
+  if(name)[].forEach.call(document.querySelectorAll("[data-ref]"),function(el){
+    el.textContent=name+" sent you. Mention "+name+" when you call.";el.classList.add("on");});
 })();
 </script>
 </body>
