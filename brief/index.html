@@ -124,7 +124,13 @@ footer{background:var(--ink);color:#cfcfc8;padding:28px 0;font-size:.9rem}
             <li>For a .com.au, Australian rules say the business itself must hold it.</li>
           </ul></li>
         <li><b>We host your website, free.</b> There is no hosting fee. You get a full copy of your site files when it goes live, and if you ever want your site hosted somewhere else, we move it for you.</li>
-        <li><b>Your website is $750, once.</b> No monthly fee for the website. Your web address renewal (about $10 to $25 a year) goes to the company you bought it from.</li>
+        <li><b>Your website is $750, once, in three stages.</b>
+          <ul>
+            <li><b>Stage 1, free.</b> We build a first look from this brief. No cost, no obligation.</li>
+            <li><b>Stage 2, $250 to start.</b> You send your photos and words, and we build the full draft.</li>
+            <li><b>Stage 3, $500 when you approve the final copy.</b> Then it goes live on your web address.</li>
+          </ul>
+          No monthly fee for the website. Your web address renewal (about $10 to $25 a year) goes to the company you bought it from.</li>
         <li><b>Changes after your site is live: $49 per change session.</b> We have a quick chat, then email you a recap of what we will change. Once you approve the recap, we make the change and send you an invoice.</li>
         <li><b>Going live.</b> You approve your site in writing. After you have paid, we point your web address at it. Until then, you only see a private draft link.</li>
         <li><b>Your details.</b> What you tell us here is used to build your website. We do not share it.</li>
@@ -311,7 +317,7 @@ footer{background:var(--ink);color:#cfcfc8;padding:28px 0;font-size:.9rem}
     var d=collect();
     if(d.hp)return;
     if(!d.agree){var ab=document.getElementById('agreeBox');ab.className='agree bad';msg.className='msg err';msg.textContent='Please tick the box at the top to agree before we send your brief.';document.getElementById('terms').scrollIntoView({behavior:'smooth',block:'center'});return}
-    d.termsVersion='v1 2026-11-03';
+    d.termsVersion='v2 2026-11-12';
     if(!d.business||!d.name||!d.phone||!d.email){msg.className='msg err';msg.textContent='We need your business name, your name, phone and email (step 1).';document.getElementById('biz').focus();return}
     if(!BRIEF_URL){
       var lines=Object.keys(d).filter(function(k){return k!=='hp'&&d[k]}).map(function(k){return k+': '+d[k]});
